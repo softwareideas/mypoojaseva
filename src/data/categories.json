@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Services",
+      "icon": "🙏",
+      "description": "View all available services"
+    },
+    {
+      "id": "birth",
+      "name": "Birth Ceremonies",
+      "icon": "👶",
+      "description": "Ceremonies for newborns and children"
+    },
+    {
+      "id": "marriage",
+      "name": "Marriage",
+      "icon": "💒",
+      "description": "Wedding and engagement ceremonies"
+    },
+    {
+      "id": "homam",
+      "name": "Homam & Yajna",
+      "icon": "🔥",
+      "description": "Sacred fire rituals and offerings"
+    },
+    {
+      "id": "grihapravesh",
+      "name": "Griha Pravesh",
+      "icon": "🏠",
+      "description": "Housewarming and home rituals"
+    },
+    {
+      "id": "festival",
+      "name": "Festivals",
+      "icon": "🎉",
+      "description": "Festival celebrations and special occasions"
+    },
+    {
+      "id": "special",
+      "name": "Special Occasions",
+      "icon": "🌟",
+      "description": "Vehicle poojas and special rituals"
+    }
+  ]
+}
