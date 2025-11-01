@@ -1,10 +1,7 @@
-# Stage 1: Build the application
+# Build stage
 FROM node:20-alpine AS builder
 
 WORKDIR /app
-
-# Update packages and install security fixes
-RUN apk update && apk upgrade && apk add --no-cache libc6-compat
 
 # Copy package files
 COPY package*.json ./
@@ -12,29 +9,25 @@ COPY package*.json ./
 # Install dependencies
 RUN npm ci
 
-# Copy source files
+# Copy source code
 COPY . .
 
-# Build the application
+# Build the app
 RUN npm run build
 
-# Stage 2: Serve the application
+# Production stage
 FROM node:20-alpine
 
 WORKDIR /app
 
-# Update packages and install security fixes
-RUN apk update && apk upgrade && apk add --no-cache libc6-compat
-
-# Install serve globally
+# Install serve to host static files
 RUN npm install -g serve
 
-# Copy built files from builder stage
+# Copy built files
 COPY --from=builder /app/dist ./dist
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port
+EXPOSE 8080
 
-# Start server on port 3000
-CMD ["serve", "-s", "dist", "-l", "3000"]
-
+# Start server (Cloud Run uses PORT env variable)
+CMD ["sh", "-c", "serve -s dist -l ${PORT:-8080}"]
