@@ -1,14 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  Heart,
-} from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail, Phone, Heart } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Footer: React.FC = () => {
@@ -69,12 +61,6 @@ const Footer: React.FC = () => {
               Contact
             </h3>
             <ul className="mt-4 space-y-3">
-              <li className="flex items-start">
-                <MapPin size={18} className="text-gold mr-2 mt-0.5" />
-                <span className="text-gray-600 text-sm">
-                  123 Temple Street, Spiritual City, 600001
-                </span>
-              </li>
               <li className="flex items-center">
                 <Phone size={18} className="text-gold mr-2" />
                 <span className="text-gray-600 text-sm">+91 86087 65113</span>
@@ -82,7 +68,7 @@ const Footer: React.FC = () => {
               <li className="flex items-center">
                 <Mail size={18} className="text-gold mr-2" />
                 <span className="text-gray-600 text-sm">
-                  mypoojaseva.com@gmail.com
+                  mypoojaseva@gmail.com
                 </span>
               </li>
             </ul>

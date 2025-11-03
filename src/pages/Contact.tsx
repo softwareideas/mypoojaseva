@@ -252,32 +252,28 @@ const Contact = () => {
                       <h3 className="text-lg font-medium text-maroon mb-1">
                         Email
                       </h3>
-                      <p className="text-gray-600">mypoojaseva.com@gmail.com</p>
-                      <p className="text-gray-600">bookings@mypoojaseva.com</p>
+                      <p className="text-gray-600">mypoojaseva@gmail.com</p>
                     </div>
                   </div>
                 </Card>
 
-                <div className="divine-border mt-8">
+                <Card className="p-6 border-gold/20 mt-6">
                   <h3 className="text-lg font-medium text-maroon mb-3">
-                    Office Hours
+                    Support Response Time
                   </h3>
-
                   <div className="space-y-2">
-                    <div className="flex justify-between text-gray-600">
-                      <span>Monday - Friday:</span>
-                      <span>9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between text-gray-600">
-                      <span>Saturday:</span>
-                      <span>9:00 AM - 2:00 PM</span>
-                    </div>
-                    <div className="flex justify-between text-gray-600">
-                      <span>Sunday:</span>
-                      <span>Closed</span>
-                    </div>
+                    <p className="text-gray-600 text-sm">
+                      Book your pooja services online anytime, 24/7
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      We typically respond to inquiries within 24 hours during
+                      business days.
+                    </p>
+                    <p className="text-gray-600 text-sm mt-3">
+                      For urgent bookings, please call or WhatsApp us directly.
+                    </p>
                   </div>
-                </div>
+                </Card>
               </div>
             </div>
           </div>

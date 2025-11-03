@@ -1,25 +1,42 @@
-
-import React from 'react';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ServiceCard from '@/components/ServiceCard';
-import PoojaBookingForm from '@/components/PoojaBookingForm';
-import PoojaCategoriesCarousel from '@/components/PoojaCategoriesCarousel';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
-import { Baby, Users, Home, Bell, Calendar, Info } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ServiceCard from "@/components/ServiceCard";
+import PoojaBookingForm from "@/components/PoojaBookingForm";
+import PoojaCategoriesCarousel from "@/components/PoojaCategoriesCarousel";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import {
+  Baby,
+  Users,
+  Home,
+  Bell,
+  Calendar,
+  Info,
+  MessageCircle,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
+  const handleCustomizedQuote = () => {
+    const phoneNumber = "918608765113";
+    const message =
+      "Hello, I'm interested in getting a customized quote for pooja services.\n\nPlease provide me with more details and pricing options.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-grow">
         {/* Hero Section */}
         <Hero />
-        
+
         {/* Life Journey Services */}
         {/* <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -68,10 +85,10 @@ const Index = () => {
             </Button>
           </div>
         </section> */}
-        
+
         {/* Pooja Categories Carousel */}
         <PoojaCategoriesCarousel />
-        
+
         {/* Divine Services at Home */}
         {/* <section className="py-16 bg-temple-pattern px-4 sm:px-6 lg:px-8 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-gold/5 to-maroon/5"></div>
@@ -170,63 +187,95 @@ const Index = () => {
             </div>
           </div>
         </section> */}
-        
+
         {/* Testimonials */}
         <section className="py-16 bg-gold/5 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-maroon mb-3">Devotee Testimonials</h2>
+              <h2 className="text-3xl font-bold text-maroon mb-3">
+                Devotee Testimonials
+              </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Hear from families who have experienced our divine services.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="divine-border bg-white">
                 <div className="flex-1">
                   <p className="text-gray-600 italic mb-4">
-                    "The Griha Pravesh ceremony was conducted with such devotion and authenticity. The pandit was knowledgeable and guided us through each step."
+                    "The Griha Pravesh ceremony was conducted with such devotion
+                    and authenticity. The pandit was knowledgeable and guided us
+                    through each step."
                   </p>
-                  <p className="font-medium text-maroon">- Sharma Family, Chennai</p>
+                  <p className="font-medium text-maroon">
+                    - Sharma Family, Chennai
+                  </p>
                 </div>
               </div>
-              
+
               <div className="divine-border bg-white">
                 <div className="flex-1">
                   <p className="text-gray-600 italic mb-4">
-                    "We are grateful for the beautiful Naamkaran ceremony for our daughter. The rituals were explained in a way that made them meaningful for our generation."
+                    "We are grateful for the beautiful Naamkaran ceremony for
+                    our daughter. The rituals were explained in a way that made
+                    them meaningful for our generation."
                   </p>
-                  <p className="font-medium text-maroon">- Patel Family, Mumbai</p>
+                  <p className="font-medium text-maroon">
+                    - Patel Family, Mumbai
+                  </p>
                 </div>
               </div>
-              
+
               <div className="divine-border bg-white">
                 <div className="flex-1">
                   <p className="text-gray-600 italic mb-4">
-                    "The Satyanarayana Pooja was conducted with such precision and devotion. We felt truly blessed and continue to experience its positive effects."
+                    "The Satyanarayana Pooja was conducted with such precision
+                    and devotion. We felt truly blessed and continue to
+                    experience its positive effects."
                   </p>
-                  <p className="font-medium text-maroon">- Reddy Family, Bangalore</p>
+                  <p className="font-medium text-maroon">
+                    - Reddy Family, Bangalore
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Call to Action */}
         <section className="py-12 bg-gradient-to-r from-maroon to-saffron">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Begin Your Spiritual Journey Today</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Begin Your Spiritual Journey Today
+            </h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-6">
-              Connect with us to learn more about our services and how we can support your spiritual needs.
+              Connect with us to learn more about our services and how we can
+              support your spiritual needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button asChild variant="outline" className="bg-white text-maroon border-white hover:bg-white/90">
+              <Button
+                asChild
+                variant="outline"
+                className="bg-white text-maroon border-white hover:bg-white/90"
+              >
                 <Link to="/services">
                   <Calendar className="mr-2 h-4 w-4" />
                   Book a Service
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="bg-white text-maroon border-white hover:bg-white/90">
+              <Button
+                className="bg-green-600 hover:bg-green-700 text-white hover:text-white border-green-600"
+                onClick={handleCustomizedQuote}
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Get Customized Quote
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="bg-white text-maroon border-white hover:bg-white/90"
+              >
                 <Link to="/about">
                   <Info className="mr-2 h-4 w-4" />
                   Learn More About Us
@@ -236,7 +285,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
