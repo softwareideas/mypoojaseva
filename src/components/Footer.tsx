@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
               <li className="flex items-center">
                 <Mail size={18} className="text-gold mr-2" />
                 <span className="text-gray-600 text-sm">
-                  info@mypoojaseva.com
+                  mypoojaseva.com@gmail.com
                 </span>
               </li>
             </ul>

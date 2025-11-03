@@ -252,7 +252,7 @@ const Contact = () => {
                       <h3 className="text-lg font-medium text-maroon mb-1">
                         Email
                       </h3>
-                      <p className="text-gray-600">info@mypoojaseva.com</p>
+                      <p className="text-gray-600">mypoojaseva.com@gmail.com</p>
                       <p className="text-gray-600">bookings@mypoojaseva.com</p>
                     </div>
                   </div>

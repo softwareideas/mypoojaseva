@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate OG Image</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        background: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .preview {
+        margin: 20px 0;
+        border: 2px dashed #ccc;
+        padding: 10px;
+        background: white;
+      }
+      button {
+        background: #f97316;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 10px 5px;
+      }
+      button:hover {
+        background: #ea580c;
+      }
+      .instructions {
+        background: #fff5e6;
+        padding: 15px;
+        border-radius: 6px;
+        margin-top: 20px;
+        border-left: 4px solid #fbbf24;
+      }
+      .instructions h3 {
+        margin-top: 0;
+        color: #991b1b;
+      }
+      .instructions ol {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+      .instructions li {
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Pooja Seva - Open Graph Image Generator</h1>
+
+      <div class="preview">
+        <canvas id="ogCanvas" width="1200" height="630"></canvas>
+      </div>
+
+      <div>
+        <button onclick="downloadPNG()">Download as PNG</button>
+        <button onclick="previewImage()">Preview Image</button>
+      </div>
+
+      <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+          <li>Click "Preview Image" to see the generated image</li>
+          <li>Click "Download as PNG" to save the image</li>
+          <li>Rename the downloaded file to <code>og-image.png</code></li>
+          <li>Place it in the <code>/public</code> folder</li>
+          <li>
+            The image should be accessible at
+            <code>https://mypoojaseva.com/og-image.png</code>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      function drawOGImage() {
+        const canvas = document.getElementById("ogCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Background gradient
+        const bgGradient = ctx.createLinearGradient(0, 0, 1200, 630);
+        bgGradient.addColorStop(0, "#f8f9fa");
+        bgGradient.addColorStop(1, "#fff5e6");
+        ctx.fillStyle = bgGradient;
+        ctx.fillRect(0, 0, 1200, 630);
+
+        // Decorative circles
+        ctx.globalAlpha = 0.1;
+        ctx.fillStyle = "#f97316";
+        ctx.beginPath();
+        ctx.arc(100, 100, 80, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#fbbf24";
+        ctx.beginPath();
+        ctx.arc(1100, 530, 100, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#991b1b";
+        ctx.beginPath();
+        ctx.arc(1050, 100, 60, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#f97316";
+        ctx.beginPath();
+        ctx.arc(150, 530, 70, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.globalAlpha = 1.0;
+
+        // Main logo circle
+        const centerX = 150;
+        const centerY = 315;
+
+        // Outer Circle - Saffron
+        const saffronGradient = ctx.createRadialGradient(
+          centerX,
+          centerY,
+          0,
+          centerX,
+          centerY,
+          90
+        );
+        saffronGradient.addColorStop(0, "#f97316");
+        saffronGradient.addColorStop(1, "#ea580c");
+        ctx.fillStyle = saffronGradient;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, 90, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Middle Circle - Gold
+        const goldGradient = ctx.createRadialGradient(
+          centerX,
+          centerY,
+          0,
+          centerX,
+          centerY,
+          75
+        );
+        goldGradient.addColorStop(0, "#fbbf24");
+        goldGradient.addColorStop(1, "#f59e0b");
+        ctx.fillStyle = goldGradient;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, 75, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Inner Circle - Maroon
+        const maroonGradient = ctx.createRadialGradient(
+          centerX,
+          centerY,
+          0,
+          centerX,
+          centerY,
+          60
+        );
+        maroonGradient.addColorStop(0, "#991b1b");
+        maroonGradient.addColorStop(1, "#7f1d1d");
+        ctx.fillStyle = maroonGradient;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, 60, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Om Symbol (using text)
+        ctx.fillStyle = "white";
+        ctx.font = "bold 72px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("ॐ", centerX, centerY);
+
+        // Decorative dots
+        ctx.fillStyle = "#fbbf24";
+        ctx.globalAlpha = 0.8;
+        ctx.beginPath();
+        ctx.arc(centerX + 15, centerY - 75, 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#f97316";
+        ctx.globalAlpha = 0.6;
+        ctx.beginPath();
+        ctx.arc(centerX - 15, centerY + 75, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.globalAlpha = 1.0;
+
+        // Main Text - My Pooja Seva
+        const textGradient = ctx.createLinearGradient(450, 240, 1150, 240);
+        textGradient.addColorStop(0, "#ea580c");
+        textGradient.addColorStop(0.5, "#fbbf24");
+        textGradient.addColorStop(1, "#ea580c");
+        ctx.fillStyle = textGradient;
+        ctx.font = "bold 72px Arial";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "top";
+        ctx.fillText("My Pooja Seva", 450, 240);
+
+        // Tagline
+        ctx.fillStyle = "#4b5563";
+        ctx.font = "36px Arial";
+        ctx.fillText("Authentic Hindu Rituals & Divine Services", 450, 320);
+
+        // Subtitle
+        ctx.fillStyle = "#6b7280";
+        ctx.font = "24px Arial";
+        ctx.fillText("Book Your Pooja Services Online", 450, 370);
+
+        // Decorative borders
+        ctx.strokeStyle = "#fbbf24";
+        ctx.globalAlpha = 0.3;
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(50, 50);
+        ctx.lineTo(1150, 50);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(50, 580);
+        ctx.lineTo(1150, 580);
+        ctx.stroke();
+      }
+
+      function downloadPNG() {
+        const canvas = document.getElementById("ogCanvas");
+        const link = document.createElement("a");
+        link.download = "og-image.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      }
+
+      function previewImage() {
+        drawOGImage();
+      }
+
+      // Draw on page load
+      window.onload = function () {
+        drawOGImage();
+      };
+    </script>
+  </body>
+</html>

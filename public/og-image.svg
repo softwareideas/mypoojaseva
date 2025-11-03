@@ -1,0 +1,74 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff5e6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="maroonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#991b1b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f1d1d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="saffronGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="80" fill="url(#saffronGradient)" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="100" fill="url(#goldGradient)" opacity="0.1"/>
+  <circle cx="1050" cy="100" r="60" fill="url(#maroonGradient)" opacity="0.1"/>
+  <circle cx="150" cy="530" r="70" fill="url(#saffronGradient)" opacity="0.1"/>
+  
+  <!-- Main logo circle in center-left -->
+  <g transform="translate(150, 315)">
+    <!-- Outer Circle - Saffron -->
+    <circle cx="0" cy="0" r="90" fill="url(#saffronGradient)"/>
+    
+    <!-- Middle Circle - Gold -->
+    <circle cx="0" cy="0" r="75" fill="url(#goldGradient)"/>
+    
+    <!-- Inner Circle - Maroon -->
+    <circle cx="0" cy="0" r="60" fill="url(#maroonGradient)"/>
+    
+    <!-- Om Symbol -->
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">ॐ</text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="15" cy="-75" r="8" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="-15" cy="75" r="6" fill="#f97316" opacity="0.6"/>
+  </g>
+  
+  <!-- Main Text - My Pooja Seva -->
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#textGradient)">
+    My Pooja Seva
+  </text>
+  
+  <!-- Tagline -->
+  <text x="450" y="340" font-family="Arial, sans-serif" font-size="36" fill="#4b5563">
+    Authentic Hindu Rituals &amp; Divine Services
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="400" font-family="Arial, sans-serif" font-size="24" fill="#6b7280">
+    Book Your Pooja Services Online
+  </text>
+  
+  <!-- Decorative border elements -->
+  <line x1="50" y1="50" x2="1150" y2="50" stroke="url(#goldGradient)" stroke-width="3" opacity="0.3"/>
+  <line x1="50" y1="580" x2="1150" y2="580" stroke="url(#goldGradient)" stroke-width="3" opacity="0.3"/>
+</svg>
+
