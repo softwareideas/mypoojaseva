@@ -16,6 +16,7 @@ You need to create an `og-image.png` file (1200x630 pixels) and place it in the 
 
 **Requirements:**
 
+
 - Dimensions: 1200px × 630px
 - Format: PNG (or JPG)
 - Should include your logo and branding
