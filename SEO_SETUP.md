@@ -38,7 +38,7 @@ Once created, save it as `og-image.png` in the `/public` folder.
 ### 2. Submit to Google Search Console
 
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add your property: `https://mypojaseva.com`
+2. Add your property: `https://mypoojaseva.com`
 3. Verify ownership (via HTML file upload or DNS)
 4. Submit your sitemap (if you have one)
 
