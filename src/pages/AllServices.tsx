@@ -11,7 +11,11 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import PoojaCard from "@/components/PoojaCard";
-import { getAllPoojas, getUniqueCategories, formatCategoryLabel } from "@/utils/poojas";
+import {
+  getAllPoojas,
+  getUniqueCategories,
+  formatCategoryLabel,
+} from "@/utils/poojas";
 
 const allPoojas = getAllPoojas();
 

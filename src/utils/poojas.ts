@@ -24,7 +24,9 @@ export function getUniqueCategories(poojas: Pooja[]): string[] {
   return Array.from(set);
 }
 
-export function groupPoojasByCategory(poojas: Pooja[]): Record<string, Pooja[]> {
+export function groupPoojasByCategory(
+  poojas: Pooja[]
+): Record<string, Pooja[]> {
   return poojas.reduce<Record<string, Pooja[]>>((acc, p) => {
     const key = String(p.category || "uncategorized");
     if (!acc[key]) acc[key] = [];
@@ -38,5 +40,3 @@ export function formatCategoryLabel(categoryId: string): string {
   const spaced = categoryId.replace(/[-_]+/g, " ");
   return spaced.replace(/\b\w/g, (c) => c.toUpperCase());
 }
-
-
