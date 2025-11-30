@@ -169,7 +169,7 @@ const LifecycleFlowchart = () => {
       <Card className="divine-border">
         <CardHeader>
           <CardTitle className="flex items-center text-maroon">
-            <CalendarIcon className="mr-2 h-5 w-5 text-gold" />
+            <CalendarIcon className="mr-2 h-5 w-5 text-saffron" />
             Enter Your Birth Date for Personalized Recommendations
           </CardTitle>
           <CardDescription>
@@ -210,7 +210,7 @@ const LifecycleFlowchart = () => {
       <Card className="divine-border">
         <CardHeader>
           <CardTitle className="text-maroon flex items-center">
-            <Sparkles className="mr-2 h-6 w-6 text-gold" />
+            <Sparkles className="mr-2 h-6 w-6 text-saffron" />
             Click on Any Stage to Explore Your Spiritual Journey
           </CardTitle>
           <CardDescription>Interactive lifecycle with detailed information and booking options</CardDescription>
@@ -254,7 +254,7 @@ const LifecycleFlowchart = () => {
               <button
                 key={stage.id}
                 onClick={() => setSelectedStage(stage)}
-                className={`absolute transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full ${stage.color} text-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-125 flex items-center justify-center group border-4 border-white/50 hover:border-gold`}
+                className={`absolute transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full ${stage.color} text-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-125 flex items-center justify-center group border-4 border-white/50 hover:border-saffron`}
                 style={{
                   left: `${stage.position.x}%`,
                   top: `${stage.position.y}%`
@@ -280,18 +280,18 @@ const LifecycleFlowchart = () => {
                 if (currentStage) {
                   return (
                     <div
-                      className="absolute w-24 h-24 rounded-full border-4 border-gold bg-gold/30 flex items-center justify-center animate-pulse shadow-2xl"
+                      className="absolute w-24 h-24 rounded-full border-4 border-saffron bg-saffron/30 flex items-center justify-center animate-pulse shadow-2xl"
                       style={{
                         left: `${currentStage.position.x}%`,
                         top: `${currentStage.position.y}%`,
                         transform: 'translate(-50%, -50%)'
                       }}
                     >
-                      <div className="text-gold font-bold text-xs text-center">
+                      <div className="text-saffron font-bold text-xs text-center">
                         <div>You Are</div>
                         <div>Here</div>
                       </div>
-                      <div className="absolute inset-0 rounded-full bg-gold/20 animate-ping"></div>
+                      <div className="absolute inset-0 rounded-full bg-saffron/20 animate-ping"></div>
                     </div>
                   );
                 }
@@ -300,7 +300,7 @@ const LifecycleFlowchart = () => {
             )}
 
             {/* Central Om Symbol */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-gold to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-saffron to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
               <span className="text-white text-2xl font-bold">ॐ</span>
             </div>
           </div>
@@ -330,15 +330,15 @@ const LifecycleFlowchart = () => {
               
               <div className="space-y-6">
                 {/* Samskaras Section */}
-                <div className="bg-gradient-to-r from-gold/10 to-orange-50 p-4 rounded-lg">
+                <div className="bg-gradient-to-r from-saffron/10 to-orange-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-maroon mb-3 flex items-center">
-                    <Sparkles className="mr-2 h-5 w-5 text-gold" />
+                    <Sparkles className="mr-2 h-5 w-5 text-saffron" />
                     Samskaras in this Stage
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {selectedStage.samskaras.map((samskara, index) => (
                       <div key={index} className="flex items-center space-x-2 p-2 bg-white rounded-lg shadow-sm">
-                        <div className="w-2 h-2 bg-gold rounded-full"></div>
+                        <div className="w-2 h-2 bg-saffron rounded-full"></div>
                         <span className="text-sm font-medium text-gray-700">{samskara}</span>
                       </div>
                     ))}
@@ -378,10 +378,10 @@ const LifecycleFlowchart = () => {
                     </h4>
                     <div className="space-y-3">
                       {calculateAuspiciousDates(userBirthDate, selectedStage).map((date, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border-l-4 border-gold">
+                        <div key={index} className="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm border-l-4 border-saffron">
                           <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                              <CalendarIcon className="h-5 w-5 text-gold" />
+                            <div className="w-10 h-10 bg-saffron/20 rounded-full flex items-center justify-center">
+                              <CalendarIcon className="h-5 w-5 text-saffron" />
                             </div>
                             <div>
                               <p className="font-semibold text-gray-800">{date.samskara}</p>
@@ -390,7 +390,7 @@ const LifecycleFlowchart = () => {
                           </div>
                           <div className="text-right">
                             <p className="font-bold text-maroon">{format(date.date, "MMM dd, yyyy")}</p>
-                            <Badge className="bg-gold text-maroon border-gold">
+                            <Badge className="bg-saffron text-maroon border-saffron">
                               Auspicious
                             </Badge>
                           </div>
@@ -409,7 +409,7 @@ const LifecycleFlowchart = () => {
                     <BookOpen className="mr-2 h-5 w-5" />
                     Book This Service
                   </Button>
-                  <Button variant="outline" className="flex-1 text-lg py-3 border-gold text-gold hover:bg-gold hover:text-white">
+                  <Button variant="outline" className="flex-1 text-lg py-3 border-saffron text-saffron hover:bg-saffron hover:text-white">
                     <Info className="mr-2 h-5 w-5" />
                     Learn More
                   </Button>
@@ -468,7 +468,7 @@ const LifecycleFlowchart = () => {
         <DialogContent className="max-w-3xl">
           <DialogHeader>
             <DialogTitle className="flex items-center text-maroon">
-              <Star className="mr-2 h-5 w-5 text-gold" />
+              <Star className="mr-2 h-5 w-5 text-saffron" />
               Your Personalized Auspicious Dates
             </DialogTitle>
             <DialogDescription>
@@ -482,7 +482,7 @@ const LifecycleFlowchart = () => {
               
               return (
                 <div className="space-y-4">
-                  <div className="p-4 bg-gold/10 rounded-lg">
+                  <div className="p-4 bg-saffron/10 rounded-lg">
                     <h4 className="font-medium text-maroon mb-2">Current Stage: {currentStage?.name}</h4>
                     <p className="text-gray-600">Age: {age} years</p>
                   </div>
@@ -491,9 +491,9 @@ const LifecycleFlowchart = () => {
                     <h4 className="font-medium text-maroon mb-3">Recommended Upcoming Dates:</h4>
                     <div className="space-y-3">
                       {currentStage && calculateAuspiciousDates(userBirthDate, currentStage).map((date, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 border border-gold/20 rounded-lg">
+                        <div key={index} className="flex items-center justify-between p-4 border border-saffron/20 rounded-lg">
                           <div className="flex items-center space-x-3">
-                            <CalendarIcon className="h-5 w-5 text-gold" />
+                            <CalendarIcon className="h-5 w-5 text-saffron" />
                             <div>
                               <p className="font-medium">{date.samskara}</p>
                               <p className="text-sm text-gray-600">{date.reason}</p>
@@ -501,7 +501,7 @@ const LifecycleFlowchart = () => {
                           </div>
                           <div className="text-right">
                             <p className="font-medium">{format(date.date, "MMM dd, yyyy")}</p>
-                            <Badge className="bg-gold text-maroon">Auspicious</Badge>
+                            <Badge className="bg-saffron text-maroon">Auspicious</Badge>
                           </div>
                         </div>
                       ))}

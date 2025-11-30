@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,75 +6,96 @@
 
 @layer base {
   :root {
-    /* Pooja Color Scheme - Saffron & Gold */
-    --background: 48 100% 97%; /* Warm cream background */
-    --foreground: 20 14.3% 4.1%;
+    /* Premium Pooja Color Scheme */
+    /* #FF9933 – Saffron (primary) = hsl(30, 100%, 60%) */
+    /* #8B1E3F – Maroon (accent) = hsl(345, 64%, 33%) */
+    /* #FFD8A8 – Soft saffron background = hsl(30, 100%, 83%) */
+    /* #FFFFFF – White (purity & space) */
+    /* #212121 – Black text = hsl(0, 0%, 13%) */
 
-    --card: 48 100% 99%; /* Slightly warmer card background */
-    --card-foreground: 20 14.3% 4.1%;
+    --background: 30 100% 95%;
+    /* Very light saffron tint for background */
+    --foreground: 0 0% 13%;
+    /* #212121 - Black text */
 
-    --popover: 48 100% 99%;
-    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    /* Pure white for cards */
+    --card-foreground: 0 0% 13%;
 
-    --primary: 24 100% 50%; /* Vibrant Saffron */
-    --primary-foreground: 60 9.1% 97.8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
 
-    --secondary: 12 76% 25%; /* Deep Maroon */
-    --secondary-foreground: 60 9.1% 97.8%;
+    --primary: 30 100% 60%;
+    /* #FF9933 - Saffron */
+    --primary-foreground: 0 0% 100%;
+    /* White text on saffron */
 
-    --muted: 48 50% 95%;
-    --muted-foreground: 25 5.3% 44.7%;
+    --secondary: 345 64% 33%;
+    /* #8B1E3F - Maroon */
+    --secondary-foreground: 0 0% 100%;
+    /* White text on maroon */
 
-    --accent: 35 100% 50%; /* Bright Gold */
-    --accent-foreground: 24 9.8% 10%;
+    --muted: 30 100% 83%;
+    /* #FFD8A8 - Soft saffron background */
+    --muted-foreground: 0 0% 25%;
+
+    --accent: 345 64% 33%;
+    /* #8B1E3F - Maroon accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 50% 80%; /* Warm gold border */
-    --input: 48 30% 90%;
-    --ring: 24 100% 50%; /* Saffron ring */
+    --border: 30 100% 75%;
+    /* Light saffron border */
+    --input: 30 100% 90%;
+    --ring: 30 100% 60%;
+    /* Saffron ring */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 48 100% 98%;
-    --sidebar-foreground: 20 14.3% 4.1%;
-    --sidebar-primary: 24 100% 50%;
-    --sidebar-primary-foreground: 60 9.1% 97.8%;
-    --sidebar-accent: 35 50% 90%;
-    --sidebar-accent-foreground: 20 14.3% 4.1%;
-    --sidebar-border: 35 30% 85%;
-    --sidebar-ring: 24 100% 50%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 13%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 100% 90%;
+    --sidebar-accent-foreground: 0 0% 13%;
+    --sidebar-border: 30 100% 85%;
+    --sidebar-ring: 30 100% 60%;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 60 9.1% 97.8%;
+    --background: 0 0% 13%;
+    /* #212121 */
+    --foreground: 0 0% 100%;
 
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 60 9.1% 97.8%;
+    --card: 0 0% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 60 9.1% 97.8%;
+    --popover: 0 0% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 35 91% 52%; /* Gold in dark mode */
-    --primary-foreground: 20 14.3% 4.1%;
+    --primary: 30 100% 60%;
+    /* #FF9933 - Saffron */
+    --primary-foreground: 0 0% 13%;
 
-    --secondary: 12 76% 25%; /* Maroon */
-    --secondary-foreground: 60 9.1% 97.8%;
+    --secondary: 345 64% 40%;
+    /* Lighter maroon for dark mode */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 12 6.5% 15.1%;
-    --muted-foreground: 24 5.4% 63.9%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 24 90% 50%; /* Saffron in dark mode */
-    --accent-foreground: 60 9.1% 97.8%;
+    --accent: 30 100% 60%;
+    /* Saffron accent in dark mode */
+    --accent-foreground: 0 0% 13%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 12 6.5% 15.1%;
-    --input: 12 6.5% 15.1%;
-    --ring: 35 91% 52%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 30 100% 60%;
   }
 }
 
@@ -88,7 +108,12 @@
     @apply bg-background text-foreground font-sanskrit;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 }
@@ -96,65 +121,105 @@
 @layer components {
   .om-symbol::before {
     content: "ॐ";
-    @apply text-gold mr-2;
+    @apply text-primary mr-2;
   }
 
   .divine-border {
-    @apply border-2 border-gold/30 rounded-lg p-4 shadow-lg;
-    background: linear-gradient(145deg, hsl(48, 100%, 99%) 0%, hsl(48, 50%, 95%) 100%);
-    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.15);
+    @apply border-2 border-primary/30 rounded-lg p-4 shadow-lg;
+    background: linear-gradient(145deg, #FFFFFF 0%, #FFD8A8 100%);
+    box-shadow: 0 8px 25px rgba(255, 153, 51, 0.2);
   }
 
   .divine-border:hover {
-    border-color: hsl(24, 100%, 50%);
-    box-shadow: 0 12px 35px rgba(255, 140, 0, 0.25);
+    border-color: #FF9933;
+    box-shadow: 0 12px 35px rgba(255, 153, 51, 0.35);
     transform: translateY(-2px);
     transition: all 0.3s ease;
   }
-  
+
   .pattern-bg {
     @apply bg-temple-pattern bg-repeat;
   }
 
-  /* Pooja Gradient Classes */
+  /* Premium Pooja Gradient Classes */
   .pooja-gradient {
-    background: linear-gradient(135deg, hsl(12, 76%, 25%) 0%, hsl(24, 100%, 50%) 50%, hsl(35, 100%, 50%) 100%);
+    background: linear-gradient(135deg, #8B1E3F 0%, #FF9933 50%, #FFD8A8 100%);
   }
 
   .saffron-gradient {
-    background: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(35, 100%, 50%) 100%);
+    background: linear-gradient(135deg, #FF9933 0%, #FFD8A8 100%);
   }
 
-  .gold-gradient {
-    background: linear-gradient(135deg, hsl(35, 100%, 50%) 0%, hsl(48, 100%, 60%) 100%);
+  .maroon-gradient {
+    background: linear-gradient(135deg, #8B1E3F 0%, #B8365A 100%);
   }
 
   .warm-gradient {
-    background: linear-gradient(145deg, hsl(48, 100%, 99%) 0%, hsl(48, 50%, 95%) 100%);
+    background: linear-gradient(145deg, #FFFFFF 0%, #FFD8A8 100%);
   }
 
   /* Enhanced Button Styles */
   .pooja-button {
-    background: linear-gradient(135deg, hsl(24, 100%, 50%) 0%, hsl(35, 100%, 50%) 100%);
-    color: hsl(20, 14%, 4%);
-    border: 2px solid hsl(12deg 86.15% 41.4%);
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+    background: linear-gradient(135deg, #FF9933 0%, #FFD8A8 100%);
+    color: #212121;
+    border: 2px solid #FF9933;
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
     transition: all 0.3s ease;
   }
 
   .pooja-button:hover {
-    background: linear-gradient(135deg, hsl(35, 100%, 50%) 0%, hsl(24, 100%, 50%) 100%);
+    background: linear-gradient(135deg, #FFD8A8 0%, #FF9933 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+  }
+
+  /* Maroon Button Variant */
+  .maroon-button {
+    background: linear-gradient(135deg, #8B1E3F 0%, #B8365A 100%);
+    color: #FFFFFF;
+    border: 2px solid #8B1E3F;
+    box-shadow: 0 4px 15px rgba(139, 30, 63, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .maroon-button:hover {
+    background: linear-gradient(135deg, #B8365A 0%, #8B1E3F 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 30, 63, 0.4);
   }
 
   /* Spiritual Glow Effects */
   .spiritual-glow {
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 153, 51, 0.4);
   }
 
   .spiritual-glow:hover {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 30px rgba(255, 153, 51, 0.6);
+  }
+
+  /* Maroon Glow Effect */
+  .maroon-glow {
+    box-shadow: 0 0 20px rgba(139, 30, 63, 0.4);
+  }
+
+  .maroon-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 30, 63, 0.6);
+  }
+
+  /* Fade-in animation for progressive reveal */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
   }
 }
 
@@ -163,21 +228,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(255, 140, 0, 0.1);
+  background-color: rgba(255, 153, 51, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.6) 0%, rgba(255, 215, 0, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.6) 0%, rgba(139, 30, 63, 0.8) 100%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.8) 0%, rgba(255, 215, 0, 1) 100%);
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.8) 0%, rgba(139, 30, 63, 1) 100%);
 }
 
 /* Enhanced Spiritual Text Gradient */
 .spiritual-text {
-  background: linear-gradient(135deg, hsl(35, 100%, 50%) 0%, hsl(24, 100%, 50%) 100%);
+  background: linear-gradient(135deg, #FF9933 0%, #8B1E3F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -185,7 +250,7 @@
 
 /* Pooja Header Gradient */
 .pooja-header {
-  background: linear-gradient(135deg, hsl(12, 76%, 25%) 0%, hsl(24, 100%, 50%) 50%, hsl(35, 100%, 50%) 100%);
+  background: linear-gradient(135deg, #8B1E3F 0%, #FF9933 50%, #FFD8A8 100%);
   color: white;
   padding: 2rem;
   text-align: center;
@@ -193,14 +258,14 @@
 
 /* Enhanced Card Styles */
 .pooja-card {
-  background: linear-gradient(145deg, hsl(48, 100%, 99%) 0%, hsl(48, 50%, 95%) 100%);
-  border: 2px solid hsl(35, 50%, 80%);
-  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.15);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFD8A8 100%);
+  border: 2px solid #FF9933;
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.15);
   transition: all 0.3s ease;
 }
 
 .pooja-card:hover {
-  border-color: hsl(24, 100%, 50%);
-  box-shadow: 0 12px 35px rgba(255, 140, 0, 0.25);
+  border-color: #8B1E3F;
+  box-shadow: 0 12px 35px rgba(139, 30, 63, 0.25);
   transform: translateY(-2px);
 }

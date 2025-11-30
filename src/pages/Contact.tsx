@@ -116,7 +116,7 @@ const Contact = () => {
       <main className="flex-grow">
         {/* Header */}
         <div className="bg-temple-pattern py-16 px-4 sm:px-6 lg:px-8 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-maroon/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 to-maroon/10"></div>
           <div className="max-w-3xl mx-auto text-center relative z-10">
             <h1 className="text-4xl font-bold text-maroon mb-4">Contact Us</h1>
             <p className="text-xl text-gray-700">
@@ -143,7 +143,7 @@ const Contact = () => {
                       name="name"
                       placeholder="Full Name"
                       required
-                      className="border-gold/20 focus-visible:ring-gold/30"
+                      className="border-saffron/20 focus-visible:ring-saffron/30"
                       disabled={isSubmitting}
                     />
                   </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                       type="email"
                       placeholder="email@example.com"
                       required
-                      className="border-gold/20 focus-visible:ring-gold/30"
+                      className="border-saffron/20 focus-visible:ring-saffron/30"
                       disabled={isSubmitting}
                     />
                   </div>
@@ -170,7 +170,7 @@ const Contact = () => {
                     type="tel"
                     placeholder="9876543210"
                     pattern="[6-9]\d{9}"
-                    className={`border-gold/20 focus-visible:ring-gold/30 ${
+                    className={`border-saffron/20 focus-visible:ring-saffron/30 ${
                       phoneError ? "border-red-500" : ""
                     }`}
                     required
@@ -192,7 +192,7 @@ const Contact = () => {
                     name="subject"
                     placeholder="How can we help you?"
                     required
-                    className="border-gold/20 focus-visible:ring-gold/30"
+                    className="border-saffron/20 focus-visible:ring-saffron/30"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                     id="message"
                     name="message"
                     placeholder="Please share details about your inquiry..."
-                    className="min-h-[120px] border-gold/20 focus-visible:ring-gold/30"
+                    className="min-h-[120px] border-saffron/20 focus-visible:ring-saffron/30"
                     required
                     disabled={isSubmitting}
                   />
@@ -212,7 +212,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-saffron to-gold text-white disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -225,11 +225,11 @@ const Contact = () => {
               </h2>
 
               <div className="space-y-6">
-                <Card className="p-6 border-gold/20">
+                <Card className="p-6 border-saffron/20">
                   <div className="flex">
                     <div className="mr-4">
-                      <div className="h-10 w-10 rounded-full bg-gold/10 flex items-center justify-center">
-                        <Phone className="h-5 w-5 text-gold" />
+                      <div className="h-10 w-10 rounded-full bg-saffron/10 flex items-center justify-center">
+                        <Phone className="h-5 w-5 text-saffron" />
                       </div>
                     </div>
                     <div>
@@ -241,11 +241,11 @@ const Contact = () => {
                   </div>
                 </Card>
 
-                <Card className="p-6 border-gold/20">
+                <Card className="p-6 border-saffron/20">
                   <div className="flex">
                     <div className="mr-4">
-                      <div className="h-10 w-10 rounded-full bg-gold/10 flex items-center justify-center">
-                        <Mail className="h-5 w-5 text-gold" />
+                      <div className="h-10 w-10 rounded-full bg-saffron/10 flex items-center justify-center">
+                        <Mail className="h-5 w-5 text-saffron" />
                       </div>
                     </div>
                     <div>
@@ -257,7 +257,7 @@ const Contact = () => {
                   </div>
                 </Card>
 
-                <Card className="p-6 border-gold/20 mt-6">
+                <Card className="p-6 border-saffron/20 mt-6">
                   <h3 className="text-lg font-medium text-maroon mb-3">
                     Support Response Time
                   </h3>

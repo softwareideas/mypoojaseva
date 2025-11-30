@@ -52,38 +52,38 @@ const PreBirthServices = () => {
           </div>
         </div>
         
-        <div className="bg-gold/5 p-6 rounded-lg">
+        <div className="bg-saffron/5 p-6 rounded-lg">
           <h3 className="text-xl font-medium text-maroon mb-4">What We Provide</h3>
           
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Complete guidance on timing and preparation</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>All necessary materials and samagri</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Experienced pandit for proper ritual performance</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Dietary and lifestyle guidance during pregnancy</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Spiritual counseling for expectant parents</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Post-ritual follow-up and support</span>
             </li>
           </ul>
           
           <div className="mt-6 space-y-2">
-            <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+            <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
               Book Pre-Birth Ritual
             </Button>
             <p className="text-xs text-gray-500 text-center">

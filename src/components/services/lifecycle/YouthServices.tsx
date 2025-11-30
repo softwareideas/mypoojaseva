@@ -63,42 +63,42 @@ const YouthServices = () => {
           </div>
         </div>
         
-        <div className="bg-gold/5 p-6 rounded-lg">
+        <div className="bg-saffron/5 p-6 rounded-lg">
           <h3 className="text-xl font-medium text-maroon mb-4">What We Provide</h3>
           
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Complete ceremonial setup with all traditional elements</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Experienced gurus and pandits for proper guidance</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Sacred thread (Yajnopavita) and other ceremonial items</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Gayatri Mantra initiation and teaching</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Educational guidance and spiritual counseling</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Certificate of completion and traditional blessings</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Follow-up guidance for continued spiritual practice</span>
             </li>
           </ul>
           
           <div className="mt-6 space-y-2">
-            <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+            <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
               Book Youth Ceremony
             </Button>
             <p className="text-xs text-gray-500 text-center">

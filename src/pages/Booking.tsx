@@ -27,6 +27,10 @@ import {
   Mail,
   CheckCircle,
   CreditCard,
+  Sparkles,
+  ChevronRight,
+  Shield,
+  Award,
 } from "lucide-react";
 import { format } from "date-fns";
 import {
@@ -57,6 +61,7 @@ const Booking = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [specialRequest, setSpecialRequest] = useState("");
+  const [currentStep, setCurrentStep] = useState(1);
 
   // OTP Verification States
   const [phoneError, setPhoneError] = useState("");
@@ -524,42 +529,99 @@ const Booking = () => {
     }
   };
 
+  // Calculate step completion
+  const steps = [
+    { number: 1, title: "Date & Time", completed: !!date && !!selectedSlot },
+    { number: 2, title: "Contact Info", completed: !!name && !!phone && !!address && isPhoneVerified },
+    { number: 3, title: "Payment", completed: !!selectedPaymentOption },
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-gold/5">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-amber-50/20 to-rose-50/10">
       <Navbar />
 
       <main className="flex-grow">
-        {/* Header */}
-        <div className="bg-temple-pattern py-12 px-4 sm:px-6 lg:px-8 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-maroon/10"></div>
+        {/* Enhanced Header */}
+        <div className="bg-gradient-to-br from-maroon/5 via-saffron/5 to-amber-50/30 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,#FFD8A8,transparent_50%),radial-gradient(circle_at_bottom_left,#FF9933,transparent_50%)]"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <Button
               variant="ghost"
               onClick={() => navigate(-1)}
-              className="mb-4 text-gold"
+              className="mb-6 text-maroon hover:text-maroon/80 hover:bg-maroon/10 rounded-lg transition-colors"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back
+              Back to Details
             </Button>
-            <h1 className="text-4xl font-bold text-maroon mb-2">
-              Book Your Pooja
-            </h1>
-            <p className="text-xl text-gray-700">
-              Select date, time, and provide your details to complete the
-              booking
-            </p>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-maroon to-saffron flex items-center justify-center">
+                <Sparkles className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-maroon to-saffron bg-clip-text text-transparent">
+                  Complete Your Booking
+                </h1>
+                <p className="text-lg text-gray-600 mt-1">
+                  Just a few steps to secure your divine ceremony
+                </p>
+              </div>
+            </div>
+            
+            {/* Step Progress Indicator */}
+            <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
+              <div className="flex items-center justify-between">
+                {steps.map((step, index) => (
+                  <React.Fragment key={step.number}>
+                    <div className="flex flex-col items-center flex-1">
+                      <div className={`relative w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 ${
+                        step.completed
+                          ? 'bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg scale-110'
+                          : currentStep === step.number
+                          ? 'bg-gradient-to-br from-maroon to-saffron text-white shadow-lg scale-110 ring-4 ring-maroon/20'
+                          : 'bg-gray-200 text-gray-500'
+                      }`}>
+                        {step.completed ? (
+                          <CheckCircle className="h-6 w-6" />
+                        ) : (
+                          step.number
+                        )}
+                      </div>
+                      <span className={`mt-2 text-sm font-medium transition-colors ${
+                        step.completed || currentStep === step.number
+                          ? 'text-maroon'
+                          : 'text-gray-500'
+                      }`}>
+                        {step.title}
+                      </span>
+                    </div>
+                    {index < steps.length - 1 && (
+                      <div className={`flex-1 h-1 mx-4 rounded-full transition-all duration-500 ${
+                        step.completed
+                          ? 'bg-gradient-to-r from-green-500 to-green-600'
+                          : 'bg-gray-200'
+                      }`} />
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Left Column - Booking Form */}
-            <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-maroon">Booking Details</CardTitle>
+            <div className="lg:col-span-2 space-y-6">
+              <Card className="border-none shadow-2xl bg-gradient-to-br from-white to-amber-50/30 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/10 rounded-full blur-3xl" />
+                <CardHeader className="relative">
+                  <CardTitle className="text-2xl font-bold text-maroon flex items-center gap-2">
+                    <CalendarIcon className="h-6 w-6 text-saffron" />
+                    Booking Details
+                  </CardTitle>
+                  <p className="text-sm text-gray-600 mt-2">Fill in the required information to complete your booking</p>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Date and Time Selection */}
                     <div>
@@ -572,12 +634,12 @@ const Booking = () => {
                         {/* Date Selection */}
                         <div className="lg:col-span-3 space-y-3">
                           <div className="flex items-center gap-2 text-gray-700 mb-3">
-                            <CalendarIcon className="h-5 w-5 text-gold" />
+                            <CalendarIcon className="h-5 w-5 text-saffron" />
                             <span className="font-medium text-lg">
                               Choose Date
                             </span>
                           </div>
-                          <div className="border-2 border-gold/20 rounded-lg p-3 sm:p-6 bg-gradient-to-br from-white to-gold/5 shadow-sm flex items-center justify-center overflow-x-auto">
+                          <div className="border-2 border-saffron/20 rounded-lg p-3 sm:p-6 bg-gradient-to-br from-white to-softSaffron/5 shadow-sm flex items-center justify-center overflow-x-auto">
                             <Calendar
                               mode="single"
                               selected={date}
@@ -594,22 +656,22 @@ const Booking = () => {
                                   "text-sm sm:text-base font-semibold text-maroon",
                                 nav: "space-x-1 flex items-center",
                                 nav_button:
-                                  "h-7 w-7 md:h-8 md:w-8 bg-transparent p-0 opacity-50 hover:opacity-100 hover:bg-gold/10 rounded",
+                                  "h-7 w-7 md:h-8 md:w-8 bg-transparent p-0 opacity-50 hover:opacity-100 hover:bg-saffron/10 rounded",
                                 table: "w-full border-collapse space-y-1",
                                 head_row: "flex mb-1 sm:mb-2",
                                 head_cell:
                                   "text-gray-600 rounded-md w-9 md:w-12 font-semibold text-xs md:text-sm",
                                 row: "flex w-full mt-1 sm:mt-2",
-                                cell: "h-9 w-9 md:h-12 md:w-12 text-center text-xs md:text-sm p-0 relative rounded-md [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-gold/10 [&:has([aria-selected])]:bg-gold/20 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+                                cell: "h-9 w-9 md:h-12 md:w-12 text-center text-xs md:text-sm p-0 relative rounded-md [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-saffron/10 [&:has([aria-selected])]:bg-saffron/20 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
                                 day: "h-9 w-9 md:h-12 md:w-12 p-0 font-medium aria-selected:opacity-100 rounded-md flex items-center justify-center text-xs md:text-sm",
                                 day_selected:
-                                  "bg-gold text-white hover:bg-gold hover:text-white focus:bg-gold focus:text-white font-bold shadow-md",
+                                  "bg-saffron text-white hover:bg-saffron hover:text-white focus:bg-saffron focus:text-white font-bold shadow-md",
                                 day_today:
-                                  "bg-gold/20 text-maroon font-bold border-2 border-gold",
+                                  "bg-saffron/20 text-maroon font-bold border-2 border-saffron",
                                 day_outside: "text-gray-400 opacity-50",
                                 day_disabled: "text-gray-300",
                                 day_range_middle:
-                                  "aria-selected:bg-gold/10 aria-selected:text-gray-900",
+                                  "aria-selected:bg-saffron/10 aria-selected:text-gray-900",
                                 day_hidden: "invisible",
                               }}
                             />
@@ -619,7 +681,7 @@ const Booking = () => {
                         {/* Time Slot Selection */}
                         <div className="lg:col-span-2 space-y-3">
                           <div className="flex items-center gap-2 text-gray-700 mb-3">
-                            <Clock className="h-5 w-5 text-gold" />
+                            <Clock className="h-5 w-5 text-saffron" />
                             <span className="font-medium text-lg">
                               Choose Time
                             </span>
@@ -628,9 +690,9 @@ const Booking = () => {
                             {timeSlots.map((slot) => (
                               <div
                                 key={slot}
-                                className={`flex items-center space-x-3 border-2 rounded-lg p-4 hover:border-gold/50 hover:bg-gold/5 transition-all cursor-pointer ${
+                                className={`flex items-center space-x-3 border-2 rounded-lg p-4 hover:border-saffron/50 hover:bg-saffron/5 transition-all cursor-pointer ${
                                   selectedSlot === slot
-                                    ? "border-gold bg-gold/10"
+                                    ? "border-saffron bg-saffron/10"
                                     : "border-gray-200"
                                 }`}
                                 onClick={() => {
@@ -643,7 +705,7 @@ const Booking = () => {
                                 <div
                                   className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
                                     selectedSlot === slot
-                                      ? "border-gold bg-gold"
+                                      ? "border-saffron bg-saffron"
                                       : "border-gray-300"
                                   }`}
                                 >
@@ -655,7 +717,7 @@ const Booking = () => {
                                   <Clock
                                     className={`h-4 w-4 mr-2 ${
                                       selectedSlot === slot
-                                        ? "text-gold"
+                                        ? "text-saffron"
                                         : "text-gray-400"
                                     }`}
                                   />
@@ -670,17 +732,17 @@ const Booking = () => {
 
                     {/* Pooja Information */}
                     {poojaData && (
-                      <div className="bg-gold/5 rounded-lg p-4 border border-gold/20">
+                      <div className="bg-saffron/5 rounded-lg p-4 border border-saffron/20">
                         <h3 className="font-medium text-maroon mb-2">
                           {poojaData.name}
                         </h3>
                         <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
                           <p className="flex items-center">
-                            <Clock className="h-4 w-4 mr-2 text-gold" />
+                            <Clock className="h-4 w-4 mr-2 text-saffron" />
                             Duration: {poojaData.duration}
                           </p>
                           <p className="flex items-center">
-                            <User className="h-4 w-4 mr-2 text-gold" />
+                            <User className="h-4 w-4 mr-2 text-saffron" />
                             Pandits: {poojaData.pandits}
                           </p>
                         </div>
@@ -741,7 +803,7 @@ const Booking = () => {
                                 disabled={
                                   !validateIndianPhone(phone) || isVerifying
                                 }
-                                className="bg-gradient-to-r from-gold to-saffron text-white whitespace-nowrap"
+                                className="bg-gradient-to-r from-saffron to-saffron text-white whitespace-nowrap"
                               >
                                 {isVerifying ? "Sending..." : "Send OTP"}
                               </Button>
@@ -794,7 +856,7 @@ const Booking = () => {
                                   type="button"
                                   onClick={handleVerifyOtp}
                                   disabled={otp.length !== 6 || isVerifying}
-                                  className="bg-gradient-to-r from-gold to-saffron text-white whitespace-nowrap"
+                                  className="bg-gradient-to-r from-saffron to-saffron text-white whitespace-nowrap"
                                 >
                                   {isVerifying ? "Verifying..." : "Verify"}
                                 </Button>
@@ -860,10 +922,10 @@ const Booking = () => {
                     <div id="recaptcha-container"></div>
 
                     {/* Payment Options - Always visible, disabled until OTP verified */}
-                    <div className="bg-gold/5 border-2 border-gold/20 rounded-lg p-6 space-y-4">
+                    <div className="bg-saffron/5 border-2 border-saffron/20 rounded-lg p-6 space-y-4">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <CreditCard className="h-5 w-5 text-gold" />
+                          <CreditCard className="h-5 w-5 text-saffron" />
                           <Label className="text-lg font-semibold text-gray-900">
                             Select Payment Option{" "}
                             <span className="text-red-500">*</span>
@@ -897,8 +959,8 @@ const Booking = () => {
                               htmlFor="advance"
                               className={`flex items-center justify-between border-2 rounded-lg p-4 cursor-pointer transition-all ${
                                 selectedPaymentOption === "advance"
-                                  ? "border-gold bg-gold/10"
-                                  : "border-gray-200 hover:border-gold/50"
+                                  ? "border-saffron bg-saffron/10"
+                                  : "border-gray-200 hover:border-saffron/50"
                               }`}
                             >
                               <div className="flex items-center space-x-3 flex-1">
@@ -924,8 +986,8 @@ const Booking = () => {
                               htmlFor="full"
                               className={`flex items-center justify-between border-2 rounded-lg p-4 cursor-pointer transition-all ${
                                 selectedPaymentOption === "full"
-                                  ? "border-gold bg-gold/10"
-                                  : "border-gray-200 hover:border-gold/50"
+                                  ? "border-saffron bg-saffron/10"
+                                  : "border-gray-200 hover:border-saffron/50"
                               }`}
                             >
                               <div className="flex items-center space-x-3 flex-1">
@@ -954,7 +1016,7 @@ const Booking = () => {
                     <div className="flex gap-4">
                       <Button
                         type="submit"
-                        className="flex-1 bg-gradient-to-r from-gold to-saffron text-white"
+                        className="flex-1 bg-gradient-to-r from-saffron to-saffron text-white"
                         disabled={
                           !isPhoneVerified ||
                           !selectedPaymentOption ||
@@ -995,77 +1057,141 @@ const Booking = () => {
 
             {/* Right Column - Booking Summary */}
             <div className="lg:col-span-1">
-              <Card className="sticky top-24">
-                <CardHeader>
-                  <CardTitle className="text-maroon">Booking Summary</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+              <div className="sticky top-24 space-y-6">
+                <Card className="border-none shadow-2xl bg-gradient-to-br from-white to-amber-50/50 overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/10 rounded-full blur-3xl" />
+                  <CardHeader className="relative">
+                    <CardTitle className="text-2xl font-bold text-maroon flex items-center gap-2">
+                      <Sparkles className="h-6 w-6 text-saffron" />
+                      Booking Summary
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6 relative">
                   {poojaData && (
                     <>
-                      <div>
-                        <h4 className="font-medium text-gray-900 mb-2">
+                      <div className="bg-white rounded-xl p-4 border-2 border-maroon/10">
+                        <h4 className="font-bold text-lg text-maroon mb-3">
                           {poojaData.name}
                         </h4>
-                        <div className="space-y-1 text-sm text-gray-600">
-                          <p>
-                            <span className="font-medium">Price:</span> ₹
-                            {poojaData.price}
-                          </p>
-                          <p>
-                            <span className="font-medium">Duration:</span>{" "}
-                            {poojaData.duration}
-                          </p>
-                          <p>
-                            <span className="font-medium">Pandits:</span>{" "}
-                            {poojaData.pandits}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="border-t pt-4 space-y-2">
-                        {isPhoneVerified && selectedPaymentOption && (
-                          <div className="flex justify-between items-center text-sm text-gray-600">
-                            <span>Selected Payment:</span>
-                            <span className="font-medium">
-                              {selectedPaymentOption === "advance"
-                                ? "30% Advance"
-                                : "100% Full"}
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-gray-600 flex items-center gap-2">
+                              <Clock className="h-4 w-4 text-saffron" />
+                              Duration
                             </span>
+                            <span className="font-semibold text-gray-900">{poojaData.duration}</span>
                           </div>
-                        )}
-                        <div className="flex justify-between items-center text-lg font-bold text-maroon">
-                          <span>Total</span>
-                          <span>₹{poojaData.price}</span>
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-gray-600 flex items-center gap-2">
+                              <User className="h-4 w-4 text-saffron" />
+                              Pandits
+                            </span>
+                            <span className="font-semibold text-gray-900">{poojaData.pandits}</span>
+                          </div>
+                          <div className="flex items-center justify-between text-sm pt-2 border-t border-gray-200">
+                            <span className="text-gray-600 font-medium">Base Price</span>
+                            <span className="font-bold text-lg text-maroon">₹{poojaData.price}</span>
+                          </div>
                         </div>
-                        {isPhoneVerified && selectedPaymentOption && (
-                          <div className="flex justify-between items-center text-base font-semibold text-gold border-t pt-2 mt-2">
-                            <span>Amount to Pay:</span>
-                            <span>₹{paymentAmount.toFixed(0)}</span>
-                          </div>
-                        )}
                       </div>
+                      {isPhoneVerified && selectedPaymentOption && (
+                        <div className="bg-gradient-to-br from-maroon/5 to-saffron/5 rounded-xl p-4 border-2 border-maroon/20">
+                          <div className="space-y-3">
+                            <div className="flex justify-between items-center text-sm">
+                              <span className="text-gray-600">Payment Option:</span>
+                              <span className="font-semibold text-maroon">
+                                {selectedPaymentOption === "advance"
+                                  ? "30% Advance"
+                                  : "100% Full Payment"}
+                              </span>
+                            </div>
+                            <div className="flex justify-between items-center pt-3 border-t border-maroon/20">
+                              <span className="text-lg font-bold text-gray-900">Amount to Pay</span>
+                              <span className="text-2xl font-extrabold bg-gradient-to-r from-maroon to-saffron bg-clip-text text-transparent">
+                                ₹{paymentAmount.toFixed(0)}
+                              </span>
+                            </div>
+                            {selectedPaymentOption === "advance" && (
+                              <p className="text-xs text-gray-600 pt-2 border-t border-maroon/10">
+                                Remaining ₹{(totalAmount - advanceAmount).toFixed(0)} to be paid on service day
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </>
                   )}
 
-                  {date && (
-                    <div className="border-t pt-4 space-y-2">
-                      <p className="text-sm text-gray-600 flex items-center">
-                        <CalendarIcon className="h-4 w-4 mr-2 text-gold" />
-                        <span className="font-medium">Date:</span>{" "}
-                        {format(date, "PPP")}
-                      </p>
-                      {selectedSlot && (
-                        <p className="text-sm text-gray-600 flex items-center">
-                          <Clock className="h-4 w-4 mr-2 text-gold" />
-                          <span className="font-medium">Time:</span>{" "}
-                          {selectedSlot}
-                        </p>
-                      )}
+                  {(date || selectedSlot) && (
+                    <div className="bg-white rounded-xl p-4 border-2 border-gray-200">
+                      <h5 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wider">Selected Schedule</h5>
+                      <div className="space-y-3">
+                        {date && (
+                          <div className="flex items-center gap-3">
+                            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-maroon/10 to-saffron/10 flex items-center justify-center flex-shrink-0">
+                              <CalendarIcon className="h-5 w-5 text-maroon" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500">Date</p>
+                              <p className="font-semibold text-gray-900">{format(date, "PPP")}</p>
+                            </div>
+                          </div>
+                        )}
+                        {selectedSlot && (
+                          <div className="flex items-center gap-3">
+                            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-saffron/10 to-maroon/10 flex items-center justify-center flex-shrink-0">
+                              <Clock className="h-5 w-5 text-saffron" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500">Time Slot</p>
+                              <p className="font-semibold text-gray-900">{selectedSlot}</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
                 </CardContent>
               </Card>
+              
+              {/* Trust Badges */}
+              <Card className="border-none shadow-lg bg-white">
+                <CardContent className="p-6 space-y-4">
+                  <h5 className="font-semibold text-gray-900 text-sm uppercase tracking-wider mb-4">Why Book With Us</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-5 w-5 text-green-600" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900 text-sm">Secure Payment</p>
+                        <p className="text-xs text-gray-600">100% safe & encrypted</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                        <Award className="h-5 w-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900 text-sm">Verified Pandits</p>
+                        <p className="text-xs text-gray-600">Experienced & authentic</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="h-5 w-5 text-purple-600" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-gray-900 text-sm">Easy Cancellation</p>
+                        <p className="text-xs text-gray-600">Free up to 24 hours</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
+        </div>
         </div>
       </main>
 

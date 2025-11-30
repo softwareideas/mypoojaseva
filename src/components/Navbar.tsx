@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, Home, Phone, Info, Calendar, Search } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Menu, X, Home, Phone, Info, Calendar, Search, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import LogoSVG from './LogoSVG';
@@ -10,7 +10,21 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSearch, setShowSearch] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,42 +43,56 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-background border-b border-gold/20 sticky top-0 z-50">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-maroon/10' 
+        : 'bg-white/80 backdrop-blur-sm border-b border-gray-200/50'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <LogoSVG size={40} showText={true} />
+            <Link to="/" className="flex items-center group">
+              <div className="transform transition-transform duration-300 group-hover:scale-105">
+                <LogoSVG size={44} showText={true} />
+              </div>
             </Link>
           </div>
           
           {/* Desktop menu */}
-          <div className="hidden md:block flex-1 ml-10">
-            <form onSubmit={handleSearch} className="flex items-center space-x-4">
-              <div className="relative flex-1 max-w-md">
+          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-end">
+            <div className="flex items-center space-x-6">
+              <NavLink to="/" icon={<Home size={18} />}>Home</NavLink>
+              <NavLink to="/services" icon={<Calendar size={18} />}>Services</NavLink>
+              <NavLink to="/about" icon={<Info size={18} />}>About</NavLink>
+              <NavLink to="/contact" icon={<Phone size={18} />}>Contact</NavLink>
+            </div>
+            <div className="flex items-center space-x-3">
+              <form onSubmit={handleSearch} className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
                   type="text"
-                  placeholder="Search poojas..."
+                  placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 border-gold/20 focus:border-gold w-full"
-                  onFocus={() => setShowSearch(true)}
-                  onBlur={() => setTimeout(() => setShowSearch(false), 200)}
+                  className="pl-9 pr-4 py-2 w-48 focus:w-64 transition-all duration-300 border-saffron/30 focus:border-saffron focus:ring-2 focus:ring-saffron/30 rounded-full text-sm outline-none shadow-none"
                 />
-              </div>
-              <NavLink to="/" icon={<Home size={18} />}>Home</NavLink>
-              <NavLink to="/about" icon={<Info size={18} />}>About</NavLink>
-              <NavLink to="/contact" icon={<Phone size={18} />}>Contact</NavLink>
-              <Button onClick={handleBookPooja} type="button" className="pooja-button spiritual-glow">Book Pooja</Button>
-            </form>
+              </form>
+              <Button 
+                onClick={handleBookPooja} 
+                type="button" 
+                className="bg-maroon hover:bg-maroon/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all duration-300 group"
+              >
+                <Sparkles className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform" />
+                Book Pooja
+              </Button>
+            </div>
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-maroon hover:text-gold hover:bg-gold/10 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-maroon hover:text-white hover:bg-maroon transition-colors duration-200 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -79,9 +107,11 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-gold/20">
-          <form onSubmit={handleSearch} className="px-3 mb-4">
+      <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+        isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+      }`}>
+        <div className="px-4 pt-4 pb-6 space-y-3 bg-gradient-to-b from-white to-gray-50 border-t border-gray-200">
+          <form onSubmit={handleSearch} className="mb-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
@@ -89,15 +119,22 @@ const Navbar: React.FC = () => {
                 placeholder="Search poojas..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 border-gold/20 focus:border-gold"
+                className="pl-10 pr-4 py-3 border-gray-200 focus:border-maroon rounded-lg"
               />
             </div>
           </form>
-          <MobileNavLink to="/" icon={<Home size={18} />}>Home</MobileNavLink>
-          <MobileNavLink to="/about" icon={<Info size={18} />}>About</MobileNavLink>
-          <MobileNavLink to="/contact" icon={<Phone size={18} />}>Contact</MobileNavLink>
-          <div className="pt-2">
-            <Button onClick={handleBookPooja} className="w-full pooja-button spiritual-glow">Book Pooja</Button>
+          <MobileNavLink to="/" icon={<Home size={20} />}>Home</MobileNavLink>
+          <MobileNavLink to="/services" icon={<Calendar size={20} />}>Services</MobileNavLink>
+          <MobileNavLink to="/about" icon={<Info size={20} />}>About</MobileNavLink>
+          <MobileNavLink to="/contact" icon={<Phone size={20} />}>Contact</MobileNavLink>
+          <div className="pt-3">
+            <Button 
+              onClick={handleBookPooja} 
+              className="w-full bg-maroon hover:bg-maroon/90 text-white rounded-lg py-3 shadow-md"
+            >
+              <Sparkles className="h-4 w-4 mr-2" />
+              Book Pooja
+            </Button>
           </div>
         </div>
       </div>
@@ -112,24 +149,41 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ to, children, icon }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  
   return (
     <Link
       to={to}
-      className="text-maroon hover:text-gold px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors duration-200"
+      className={`relative text-sm font-medium flex items-center transition-all duration-200 group ${
+        isActive 
+          ? 'text-maroon' 
+          : 'text-gray-600 hover:text-maroon'
+      }`}
     >
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className="mr-1.5 transition-transform group-hover:scale-110">{icon}</span>}
       {children}
+      <span className={`absolute -bottom-1 left-0 h-0.5 bg-maroon transition-all duration-300 ${
+        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+      }`} />
     </Link>
   );
 };
 
 const MobileNavLink: React.FC<NavLinkProps> = ({ to, children, icon }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  
   return (
     <Link
       to={to}
-      className="text-maroon hover:bg-gold/10 hover:text-gold block px-3 py-2 rounded-md text-base font-medium flex items-center"
+      className={`flex items-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+        isActive 
+          ? 'bg-maroon text-white shadow-md' 
+          : 'text-gray-700 hover:bg-maroon/10 hover:text-maroon'
+      }`}
     >
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className="mr-3">{icon}</span>}
       {children}
     </Link>
   );

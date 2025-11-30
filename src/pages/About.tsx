@@ -11,7 +11,7 @@ const About = () => {
       <main className="flex-grow">
         {/* Header */}
         <div className="bg-temple-pattern py-16 px-4 sm:px-6 lg:px-8 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-gold/10 to-maroon/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-saffron/10 to-maroon/10"></div>
           <div className="max-w-3xl mx-auto text-center relative z-10">
             <h1 className="text-4xl font-bold text-maroon mb-4">
               About My Pooja Seva
@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </section>
 
-        <Separator className="max-w-4xl mx-auto bg-gold/20" />
+        <Separator className="max-w-4xl mx-auto bg-saffron/20" />
 
         {/* Our Story */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -87,7 +87,7 @@ const About = () => {
           </div>
         </section>
 
-        <Separator className="max-w-4xl mx-auto bg-gold/20" />
+        <Separator className="max-w-4xl mx-auto bg-saffron/20" />
 
         {/* Our Values */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -155,7 +155,7 @@ const About = () => {
         </section>
 
         {/* Our Team */}
-        <section className="py-12 bg-gold/5 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 bg-saffron/5 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-maroon mb-6 text-center">
               Our Team
@@ -169,7 +169,7 @@ const About = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                <div className="w-32 h-32 mx-auto rounded-full bg-saffron/20 flex items-center justify-center mb-4">
                   <span className="text-5xl text-maroon">पं</span>
                 </div>
                 <h3 className="text-xl font-medium text-maroon">
@@ -179,7 +179,7 @@ const About = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                <div className="w-32 h-32 mx-auto rounded-full bg-saffron/20 flex items-center justify-center mb-4">
                   <span className="text-5xl text-maroon">डॉ</span>
                 </div>
                 <h3 className="text-xl font-medium text-maroon">
@@ -189,7 +189,7 @@ const About = () => {
               </div>
 
               <div className="text-center">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                <div className="w-32 h-32 mx-auto rounded-full bg-saffron/20 flex items-center justify-center mb-4">
                   <span className="text-5xl text-maroon">श्री</span>
                 </div>
                 <h3 className="text-xl font-medium text-maroon">

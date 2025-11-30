@@ -117,7 +117,7 @@ const PoojaCalendar = () => {
     const dateInfo = getDateInfo(date);
     if (dateInfo) {
       if (dateInfo.type === 'festival') {
-        return 'bg-gold/20 text-maroon font-semibold';
+        return 'bg-saffron/20 text-maroon font-semibold';
       } else if (dateInfo.type === 'tarpanam') {
         return 'bg-blue-100 text-blue-800 font-semibold';
       } else {
@@ -132,7 +132,7 @@ const PoojaCalendar = () => {
       <Card className="divine-border">
         <CardHeader>
           <CardTitle className="flex items-center text-maroon">
-            <CalendarIcon className="mr-2 h-5 w-5 text-gold" />
+            <CalendarIcon className="mr-2 h-5 w-5 text-saffron" />
             Pooja Calendar
           </CardTitle>
           <CardDescription>
@@ -161,7 +161,7 @@ const PoojaCalendar = () => {
                   >
                     {date.getDate()}
                     {dateInfo && (
-                      <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-gold"></div>
+                      <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-saffron"></div>
                     )}
                   </div>
                 );
@@ -171,7 +171,7 @@ const PoojaCalendar = () => {
           
           <div className="mt-4 space-y-2">
             <div className="flex items-center text-sm text-gray-600">
-              <div className="w-3 h-3 rounded-full bg-gold/20 mr-2"></div>
+              <div className="w-3 h-3 rounded-full bg-saffron/20 mr-2"></div>
               <span>Festival Days</span>
             </div>
             <div className="flex items-center text-sm text-gray-600">
@@ -189,7 +189,7 @@ const PoojaCalendar = () => {
       <Card className="divine-border">
         <CardHeader>
           <CardTitle className="flex items-center text-maroon">
-            <Star className="mr-2 h-5 w-5 text-gold" />
+            <Star className="mr-2 h-5 w-5 text-saffron" />
             {selectedDateInfo ? selectedDateInfo.title : 'Select a Date'}
           </CardTitle>
           <CardDescription>
@@ -207,7 +207,7 @@ const PoojaCalendar = () => {
               <Badge 
                 variant={selectedDateInfo.type === 'festival' ? 'default' : selectedDateInfo.type === 'tarpanam' ? 'default' : 'secondary'}
                 className={
-                  selectedDateInfo.type === 'festival' ? 'bg-gold text-maroon' : 
+                  selectedDateInfo.type === 'festival' ? 'bg-saffron text-maroon' : 
                   selectedDateInfo.type === 'tarpanam' ? 'bg-blue-100 text-blue-800' : 
                   'bg-saffron/20 text-maroon'
                 }
@@ -222,14 +222,14 @@ const PoojaCalendar = () => {
                 <div className="space-y-2">
                   {selectedDateInfo.poojas.map((pooja, index) => (
                     <div key={index} className="flex items-center text-sm">
-                      <div className="w-2 h-2 rounded-full bg-gold mr-2"></div>
+                      <div className="w-2 h-2 rounded-full bg-saffron mr-2"></div>
                       <span>{pooja}</span>
                     </div>
                   ))}
                 </div>
               </div>
               
-              <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+              <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
                 Book Pooja for this Date
               </Button>
             </div>

@@ -23,18 +23,18 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
         {/* Outer Circle - Saffron Gradient */}
         <defs>
           <radialGradient id="saffronGradient" cx="50%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#FF8C00" />
-            <stop offset="100%" stopColor="#FF6B35" />
-          </radialGradient>
-
-          <radialGradient id="goldGradient" cx="50%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#FFD700" />
-            <stop offset="100%" stopColor="#FFA500" />
+            <stop offset="0%" stopColor="#FF9933" />
+            <stop offset="100%" stopColor="#E68A2E" />
           </radialGradient>
 
           <radialGradient id="maroonGradient" cx="50%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#8B0000" />
-            <stop offset="100%" stopColor="#A0522D" />
+            <stop offset="0%" stopColor="#8B1E3F" />
+            <stop offset="100%" stopColor="#6D1731" />
+          </radialGradient>
+
+          <radialGradient id="softSaffronGradient" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stopColor="#FFD8A8" />
+            <stop offset="100%" stopColor="#FFC988" />
           </radialGradient>
         </defs>
 
@@ -44,7 +44,7 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
           cy="50"
           r="45"
           fill="url(#saffronGradient)"
-          stroke="#FFD700"
+          stroke="#8B1E3F"
           strokeWidth="2"
         />
 
@@ -53,8 +53,8 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
           cx="50"
           cy="50"
           r="35"
-          fill="url(#goldGradient)"
-          stroke="#FF8C00"
+          fill="url(#maroonGradient)"
+          stroke="#FF9933"
           strokeWidth="1"
         />
 
@@ -63,8 +63,8 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
           cx="50"
           cy="50"
           r="25"
-          fill="url(#maroonGradient)"
-          stroke="#FFD700"
+          fill="url(#softSaffronGradient)"
+          stroke="#8B1E3F"
           strokeWidth="1"
         />
 
@@ -74,7 +74,7 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
           y="58"
           textAnchor="middle"
           fontSize="20"
-          fill="white"
+          fill="#8B1E3F"
           fontFamily="serif"
           fontWeight="bold"
           className="drop-shadow-sm"
@@ -83,13 +83,13 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
         </text>
 
         {/* Decorative Elements */}
-        <circle cx="75" cy="25" r="4" fill="#FFD700" opacity="0.8" />
-        <circle cx="25" cy="75" r="3" fill="#FF8C00" opacity="0.7" />
-        <circle cx="15" cy="20" r="2" fill="#FFA500" opacity="0.6" />
-        <circle cx="85" cy="80" r="2" fill="#FFD700" opacity="0.6" />
+        <circle cx="75" cy="25" r="4" fill="#FF9933" opacity="0.8" />
+        <circle cx="25" cy="75" r="3" fill="#8B1E3F" opacity="0.7" />
+        <circle cx="15" cy="20" r="2" fill="#FFD8A8" opacity="0.6" />
+        <circle cx="85" cy="80" r="2" fill="#FF9933" opacity="0.6" />
 
         {/* Spiritual Rays */}
-        <g stroke="#FFD700" strokeWidth="1" opacity="0.4">
+        <g stroke="#FF9933" strokeWidth="1" opacity="0.4">
           <line x1="50" y1="5" x2="50" y2="15" />
           <line x1="50" y1="85" x2="50" y2="95" />
           <line x1="5" y1="50" x2="15" y2="50" />
@@ -104,7 +104,7 @@ const LogoSVG: React.FC<LogoSVGProps> = ({
       {/* Logo Text */}
       {showText && (
         <div className="flex flex-col">
-          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent">
+          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-saffron via-maroon to-saffron bg-clip-text text-transparent">
             My Pooja Seva
           </span>
           <span className="text-xs md:text-sm text-gray-600 font-medium">

@@ -101,39 +101,39 @@ const PoojaBookingForm: React.FC = () => {
   
   return (
     <div className="max-w-md mx-auto divine-border bg-white relative">
-      <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-gold"></div>
-      <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-gold"></div>
-      <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-gold"></div>
-      <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-gold"></div>
+      <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-saffron"></div>
+      <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-saffron"></div>
+      <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-saffron"></div>
+      <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-saffron"></div>
       
       <h3 className="text-xl font-medium text-center mb-6 text-maroon">Book Your Pooja Service</h3>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="name">Your Name</Label>
-          <Input id="name" placeholder="Full Name" required className="border-gold/20 focus-visible:ring-gold/30" />
+          <Input id="name" placeholder="Full Name" required className="border-saffron/20 focus-visible:ring-saffron/30" />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" type="email" placeholder="email@example.com" required className="border-gold/20 focus-visible:ring-gold/30" />
+          <Input id="email" type="email" placeholder="email@example.com" required className="border-saffron/20 focus-visible:ring-saffron/30" />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" placeholder="+91 98765 43210" required className="border-gold/20 focus-visible:ring-gold/30" />
+          <Input id="phone" placeholder="+91 98765 43210" required className="border-saffron/20 focus-visible:ring-saffron/30" />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="pooja-type">Select Pooja Service</Label>
           <Select value={selectedPooja} onValueChange={setSelectedPooja}>
-            <SelectTrigger className="border-gold/20 focus:ring-gold/30">
+            <SelectTrigger className="border-saffron/20 focus:ring-saffron/30">
               <SelectValue placeholder="Select a pooja service" />
             </SelectTrigger>
             <SelectContent className="max-h-96">
               {['Daily', 'Festival', 'Special', 'Temple', 'Traditional', 'Monthly Tarpanam'].map((category) => (
                 <div key={category}>
-                  <div className="px-2 py-1.5 text-sm font-semibold text-maroon bg-gold/10">
+                  <div className="px-2 py-1.5 text-sm font-semibold text-maroon bg-saffron/10">
                     {category} Poojas
                   </div>
                   {poojaTypes
@@ -155,9 +155,9 @@ const PoojaBookingForm: React.FC = () => {
             <PopoverTrigger asChild>
               <Button
                 variant="outline"
-                className="w-full border-gold/20 justify-start text-left font-normal"
+                className="w-full border-saffron/20 justify-start text-left font-normal"
               >
-                <CalendarIcon className="mr-2 h-4 w-4 text-gold" />
+                <CalendarIcon className="mr-2 h-4 w-4 text-saffron" />
                 {date ? format(date, "PPP") : <span className="text-muted-foreground">Select date</span>}
               </Button>
             </PopoverTrigger>
@@ -176,11 +176,11 @@ const PoojaBookingForm: React.FC = () => {
         <div className="space-y-2">
           <Label>Select Time Slot</Label>
           <Select value={selectedTime} onValueChange={setSelectedTime}>
-            <SelectTrigger className="border-gold/20 focus:ring-gold/30">
+            <SelectTrigger className="border-saffron/20 focus:ring-saffron/30">
               <SelectValue placeholder="Select time">
                 {selectedTime || (
                   <span className="flex items-center text-muted-foreground">
-                    <Clock className="mr-2 h-4 w-4 text-gold" />
+                    <Clock className="mr-2 h-4 w-4 text-saffron" />
                     <span>Choose time</span>
                   </span>
                 )}
@@ -198,12 +198,12 @@ const PoojaBookingForm: React.FC = () => {
         
         <div className="space-y-2">
           <Label htmlFor="address">Address</Label>
-          <Textarea id="address" placeholder="Enter complete address for the pooja service" className="border-gold/20 focus-visible:ring-gold/30" rows={3} />
+          <Textarea id="address" placeholder="Enter complete address for the pooja service" className="border-saffron/20 focus-visible:ring-saffron/30" rows={3} />
         </div>
         
         <div className="space-y-2">
           <Label htmlFor="requirements">Special Requirements (Optional)</Label>
-          <Textarea id="requirements" placeholder="Any special requests or requirements" className="border-gold/20 focus-visible:ring-gold/30" rows={2} />
+          <Textarea id="requirements" placeholder="Any special requests or requirements" className="border-saffron/20 focus-visible:ring-saffron/30" rows={2} />
         </div>
         
         <Button type="submit" className="w-full pooja-button spiritual-glow">
