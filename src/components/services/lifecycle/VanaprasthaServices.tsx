@@ -47,34 +47,34 @@ const VanaprasthaServices = () => {
           </div>
         </div>
         
-        <div className="bg-gold/5 p-6 rounded-lg">
+        <div className="bg-saffron/5 p-6 rounded-lg">
           <h3 className="text-xl font-medium text-maroon mb-4">Spiritual Services</h3>
           
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Personal spiritual mentor assignment</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Pilgrimage tour planning and coordination</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Daily spiritual practice schedule creation</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Regular satsang and spiritual discourse sessions</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Preparation for the final life stage transition</span>
             </li>
           </ul>
           
           <div className="mt-6">
-            <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+            <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
               Begin Spiritual Journey
             </Button>
           </div>

@@ -63,12 +63,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for our app
-				saffron: "#FF9933",
-				maroon: "#800000",
-				gold: "#D4AF37",
-				darkOrange: "#FF8C00",
-				spiritualGreen: "#006400",
+				// Premium Pooja App Colors
+				saffron: "#FF9933", // Primary
+				maroon: "#8B1E3F", // Accent
+				softSaffron: "#FFD8A8", // Background
+				pureWhite: "#FFFFFF", // White
+				blackText: "#212121", // Text
+				// Mappings for backward compatibility/gradients
+				gold: "#FF9933", // Mapping gold to Saffron for consistency
+				brass: "#FF9933", // Mapping brass to Saffron
+				templeGreen: "#8B1E3F", // Mapping templeGreen to Maroon
+				sandalwood: "#FFD8A8", // Mapping sandalwood to Soft Saffron
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

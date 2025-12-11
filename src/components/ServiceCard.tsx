@@ -18,13 +18,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description, 
   icon, 
   link,
-  color = "from-gold to-saffron" 
+  color = "from-saffron to-saffron" 
 }) => {
   return (
-    <Card className="overflow-hidden border border-gold/20 transition-all duration-300 hover:shadow-lg hover:border-gold/40 h-full flex flex-col">
+    <Card className="overflow-hidden border border-saffron/20 transition-all duration-300 hover:shadow-lg hover:border-saffron/40 h-full flex flex-col">
       <div className={`h-2 bg-gradient-to-r ${color}`}></div>
       <CardHeader>
-        <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+        <div className="w-12 h-12 rounded-full bg-saffron/10 flex items-center justify-center mb-4">
           {icon}
         </div>
         <CardTitle className="text-xl text-maroon">{title}</CardTitle>
@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </ul>
       </CardContent>
       <CardFooter className="pt-2">
-        <Button asChild variant="ghost" className="w-full justify-between hover:bg-gold/10 text-gold">
+        <Button asChild variant="ghost" className="w-full justify-between hover:bg-saffron/10 text-saffron">
           <Link to={link} className="flex items-center">
             <span>Learn More</span>
             <ArrowRight size={16} />

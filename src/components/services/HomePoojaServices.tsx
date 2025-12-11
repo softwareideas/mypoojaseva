@@ -75,7 +75,7 @@ const HomePoojaServices = () => {
               <TabsTrigger 
                 key={category.id} 
                 value={category.id}
-                className="text-xs lg:text-sm data-[state=active]:bg-gold/10 data-[state=active]:text-gold"
+                className="text-xs lg:text-sm data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron"
               >
                 <span className="mr-1">{category.icon}</span>
                 <span className="hidden sm:inline">{category.title}</span>
@@ -123,8 +123,8 @@ const HomePoojaServices = () => {
               'Digital documentation and certificate provision'
             ].map((service) => (
               <div key={service} className="flex items-start">
-                <div className="h-5 w-5 rounded-full bg-gold/10 flex items-center justify-center mr-3 mt-1">
-                  <div className="h-2 w-2 rounded-full bg-gold"></div>
+                <div className="h-5 w-5 rounded-full bg-saffron/10 flex items-center justify-center mr-3 mt-1">
+                  <div className="h-2 w-2 rounded-full bg-saffron"></div>
                 </div>
                 <p className="text-gray-600">{service}</p>
               </div>

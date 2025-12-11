@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-background to-gold/5 border-t border-gold/20">
+    <footer className="bg-gradient-to-b from-background to-softSaffron/5 border-t border-saffron/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <span className="text-xl text-maroon font-heading font-bold">
                 My Pooja Seva
               </span>
-              <span className="ml-2 text-xs text-gold/80">Divine Services</span>
+              <span className="ml-2 text-xs text-saffron/80">Divine Services</span>
             </Link>
             <p className="mt-4 text-sm text-gray-600">
               Guiding you through life's sacred Hindu rituals with authenticity
@@ -62,11 +62,11 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-center">
-                <Phone size={18} className="text-gold mr-2" />
+                <Phone size={18} className="text-saffron mr-2" />
                 <span className="text-gray-600 text-sm">+91 86087 65113</span>
               </li>
               <li className="flex items-center">
-                <Mail size={18} className="text-gold mr-2" />
+                <Mail size={18} className="text-saffron mr-2" />
                 <span className="text-gray-600 text-sm">
                   mypoojaseva@gmail.com
                 </span>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gold/10">
+        <div className="mt-12 pt-8 border-t border-saffron/10">
           <p className="text-center text-gray-500 text-sm">
             © {currentYear} My Pooja Seva - Divine Services. All rights
             reserved. Made with{" "}
@@ -96,7 +96,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon }) => {
   return (
     <a
       href={href}
-      className="text-gray-500 hover:text-gold transition duration-300 h-8 w-8 flex items-center justify-center rounded-full bg-gold/10 hover:bg-gold/20"
+      className="text-gray-500 hover:text-saffron transition duration-300 h-8 w-8 flex items-center justify-center rounded-full bg-saffron/10 hover:bg-saffron/20"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -115,7 +115,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
     <li>
       <Link
         to={to}
-        className="text-gray-600 hover:text-gold transition duration-300 text-sm"
+        className="text-gray-600 hover:text-saffron transition duration-300 text-sm"
       >
         {children}
       </Link>

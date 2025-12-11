@@ -39,12 +39,18 @@ const PoojaCategoriesCarousel = () => {
   );
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gold/5">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-softSaffron/5">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-maroon mb-3">Divine Pooja Services</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Experience authentic Hindu rituals and ceremonies performed by experienced pandits
+          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-saffron mb-2">
+            Sacred Offerings
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-maroon mb-4">
+            Divine Pooja Services
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-10">
+            Experience authentic Hindu rituals and ceremonies, performed with
+            devotion by experienced pandits in the comfort of your home.
           </p>
 
           {/* Category Filter */}
@@ -54,9 +60,11 @@ const PoojaCategoriesCarousel = () => {
                 key={category.id}
                 variant={activeCategory === category.id ? "default" : "outline"}
                 onClick={() => setActiveCategory(category.id)}
-                className={`${activeCategory === category.id 
-                  ? "bg-gold text-white hover:bg-gold/90" 
-                  : "border-gold text-gold hover:bg-gold/10"}`}
+                className={`rounded-full px-6 ${
+                  activeCategory === category.id
+                    ? "bg-maroon text-white hover:bg-maroon/90 shadow-md"
+                    : "border-maroon/20 text-maroon hover:bg-maroon hover:text-white hover:border-maroon"
+                }`}
               >
                 {category.title}
               </Button>
@@ -86,7 +94,11 @@ const PoojaCategoriesCarousel = () => {
         </div>
 
         <div className="text-center mt-8">
-          <Button asChild className="bg-gradient-to-r from-gold to-saffron text-white">
+          <Button
+            asChild
+            variant="outline"
+            className="min-w-[200px] shadow-sm hover:shadow-md"
+          >
             <Link to="/services">
               View All Services
               <ArrowRight className="ml-2 h-4 w-4" />

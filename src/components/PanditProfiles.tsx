@@ -115,14 +115,14 @@ const PanditProfiles = () => {
               <div className="flex justify-center mb-4">
                 <Avatar className="h-20 w-20">
                   <AvatarImage src={pandit.image} alt={pandit.name} />
-                  <AvatarFallback className="bg-gold/10 text-maroon text-lg font-semibold">
+                  <AvatarFallback className="bg-saffron/10 text-maroon text-lg font-semibold">
                     {pandit.name.split(' ').map(n => n[0]).join('')}
                   </AvatarFallback>
                 </Avatar>
               </div>
               <CardTitle className="text-xl text-maroon">{pandit.name}</CardTitle>
               <CardDescription className="flex items-center justify-center">
-                <Award className="h-4 w-4 mr-1 text-gold" />
+                <Award className="h-4 w-4 mr-1 text-saffron" />
                 {pandit.experience} Experience
               </CardDescription>
             </CardHeader>
@@ -130,7 +130,7 @@ const PanditProfiles = () => {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <Star className="h-4 w-4 text-gold mr-1" />
+                  <Star className="h-4 w-4 text-saffron mr-1" />
                   <span className="font-medium">{pandit.rating}</span>
                   <span className="text-sm text-gray-500 ml-1">({pandit.reviews} reviews)</span>
                 </div>
@@ -175,7 +175,7 @@ const PanditProfiles = () => {
                   <Phone className="h-4 w-4 mr-1" />
                   Contact
                 </Button>
-                <Button size="sm" className="bg-gradient-to-r from-saffron to-gold text-white">
+                <Button size="sm" className="bg-gradient-to-r from-saffron to-softSaffron text-white">
                   Book Service
                 </Button>
               </div>
@@ -185,13 +185,13 @@ const PanditProfiles = () => {
       </div>
 
       <div className="text-center">
-        <Card className="divine-border bg-gold/5">
+        <Card className="divine-border bg-saffron/5">
           <CardContent className="py-8">
             <h3 className="text-xl font-semibold text-maroon mb-4">Need a Specific Pandit?</h3>
             <p className="text-gray-600 mb-6">
               Can't find the right pandit for your needs? We have a network of experienced pandits across India.
             </p>
-            <Button className="bg-gradient-to-r from-saffron to-gold text-white">
+            <Button className="bg-gradient-to-r from-saffron to-softSaffron text-white">
               Request Custom Pandit
             </Button>
           </CardContent>

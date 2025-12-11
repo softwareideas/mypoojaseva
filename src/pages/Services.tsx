@@ -26,37 +26,37 @@ const Services = () => {
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6">
               <TabsTrigger
                 value="flowchart"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Interactive Journey
               </TabsTrigger>
               <TabsTrigger
                 value="lifecycle"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Life Cycle
               </TabsTrigger>
               <TabsTrigger
                 value="pooja"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Pooja Services
               </TabsTrigger>
               <TabsTrigger
                 value="tarpanam"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Monthly Tarpanam
               </TabsTrigger>
               <TabsTrigger
                 value="samskara"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Samskara Guide
               </TabsTrigger>
               <TabsTrigger
                 value="calendar"
-                className="data-[state=active]:bg-gold/10 data-[state=active]:text-gold text-xs lg:text-sm"
+                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
               >
                 Calendar
               </TabsTrigger>

@@ -107,46 +107,46 @@ const DeathServices = () => {
           </div>
         </div>
         
-        <div className="bg-gold/5 p-6 rounded-lg">
+        <div className="bg-saffron/5 p-6 rounded-lg">
           <h3 className="text-xl font-medium text-maroon mb-4">What We Provide</h3>
           
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>24/7 emergency services for immediate needs</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Complete arrangement of all ceremonial materials</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Experienced pandits for proper ritual performance</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Guidance for cremation and final rites</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Arrangements for sacred river immersion</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Annual Shraddha ceremony arrangements</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Emotional support and spiritual counseling</span>
             </li>
             <li className="flex items-start">
-              <Star className="h-5 w-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+              <Star className="h-5 w-5 text-saffron mr-2 flex-shrink-0 mt-0.5" />
               <span>Documentation and certificate services</span>
             </li>
           </ul>
           
           <div className="mt-6 space-y-2">
-            <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+            <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
               Emergency Services
             </Button>
             <Button variant="outline" className="w-full">

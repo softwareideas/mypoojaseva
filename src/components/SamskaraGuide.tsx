@@ -219,11 +219,11 @@ const SamskaraGuide = () => {
               {categories.map((category) => (
                 <div
                   key={category.id}
-                  className="flex items-center justify-between p-3 rounded-lg hover:bg-gold/5 cursor-pointer transition-colors"
+                  className="flex items-center justify-between p-3 rounded-lg hover:bg-saffron/5 cursor-pointer transition-colors"
                   onClick={() => setSelectedSamskara(samskaras.find(s => s.category === category.name)?.id || "garbhadhana")}
                 >
                   <div className="flex items-center">
-                    <category.icon className="h-5 w-5 text-gold mr-3" />
+                    <category.icon className="h-5 w-5 text-saffron mr-3" />
                     <span className="font-medium">{category.name}</span>
                   </div>
                   <Badge variant="secondary">{category.count}</Badge>
@@ -237,7 +237,7 @@ const SamskaraGuide = () => {
           <Card className="divine-border">
             <CardHeader>
               <div className="flex items-center">
-                {selectedSamskaraData?.icon && React.createElement(selectedSamskaraData.icon, { className: "h-6 w-6 text-gold mr-3" })}
+                {selectedSamskaraData?.icon && React.createElement(selectedSamskaraData.icon, { className: "h-6 w-6 text-saffron mr-3" })}
                 <div>
                   <CardTitle className="text-maroon">{selectedSamskaraData?.name}</CardTitle>
                   <CardDescription>{selectedSamskaraData?.description}</CardDescription>
@@ -247,14 +247,14 @@ const SamskaraGuide = () => {
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center">
-                  <Clock className="h-5 w-5 text-gold mr-2" />
+                  <Clock className="h-5 w-5 text-saffron mr-2" />
                   <div>
                     <p className="font-medium">Timing</p>
                     <p className="text-sm text-gray-600">{selectedSamskaraData?.timing}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Star className="h-5 w-5 text-gold mr-2" />
+                  <Star className="h-5 w-5 text-saffron mr-2" />
                   <div>
                     <p className="font-medium">Purpose</p>
                     <p className="text-sm text-gray-600">{selectedSamskaraData?.purpose}</p>
@@ -272,7 +272,7 @@ const SamskaraGuide = () => {
                 <p className="text-gray-600">{selectedSamskaraData?.significance}</p>
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-saffron to-gold text-white">
+              <Button className="w-full bg-gradient-to-r from-saffron to-softSaffron text-white">
                 Book This Samskara
               </Button>
             </CardContent>
@@ -289,7 +289,7 @@ const SamskaraGuide = () => {
           >
             <CardContent className="p-4">
               <div className="flex items-center mb-2">
-                <samskara.icon className="h-5 w-5 text-gold mr-2" />
+                <samskara.icon className="h-5 w-5 text-saffron mr-2" />
                 <h3 className="font-medium text-maroon text-sm">{samskara.name}</h3>
               </div>
               <p className="text-xs text-gray-600">{samskara.description}</p>

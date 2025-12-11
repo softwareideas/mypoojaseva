@@ -32,33 +32,33 @@ const Logo: React.FC<LogoProps> = ({
         className={`relative ${sizeClasses[size]} flex items-center justify-center`}
       >
         {/* Outer Circle - Saffron */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg"></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-saffron to-saffron/90 shadow-lg"></div>
 
-        {/* Middle Circle - Gold */}
-        <div className="absolute inset-1 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500"></div>
+        {/* Middle Circle - Maroon */}
+        <div className="absolute inset-1 rounded-full bg-gradient-to-br from-maroon to-maroon/90"></div>
 
-        {/* Inner Circle - Maroon */}
-        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-red-800 to-red-900"></div>
+        {/* Inner Circle - Soft Saffron */}
+        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-softSaffron to-softSaffron/90"></div>
 
         {/* Om Symbol */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white font-bold text-xs md:text-sm lg:text-base xl:text-lg">
+          <span className="text-maroon font-bold text-xs md:text-sm lg:text-base xl:text-lg">
             ॐ
           </span>
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full opacity-80"></div>
-        <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-orange-400 rounded-full opacity-60"></div>
-        <div className="absolute top-0 -left-2 w-1 h-1 bg-yellow-300 rounded-full opacity-70"></div>
-        <div className="absolute bottom-0 -right-2 w-1 h-1 bg-orange-300 rounded-full opacity-70"></div>
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-maroon rounded-full opacity-80"></div>
+        <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-softSaffron rounded-full opacity-60"></div>
+        <div className="absolute top-0 -left-2 w-1 h-1 bg-saffron/70 rounded-full opacity-70"></div>
+        <div className="absolute bottom-0 -right-2 w-1 h-1 bg-softSaffron/70 rounded-full opacity-70"></div>
       </div>
 
       {/* Logo Text */}
       {showText && (
         <div className="flex flex-col">
           <span
-            className={`font-bold ${textSizes[size]} bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent`}
+            className={`font-bold ${textSizes[size]} bg-gradient-to-r from-saffron via-maroon to-saffron bg-clip-text text-transparent`}
           >
             My Pooja Seva
           </span>
