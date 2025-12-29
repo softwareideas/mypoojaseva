@@ -41,6 +41,12 @@
       "name": "Special Occasions",
       "icon": "🌟",
       "description": "Vehicle poojas and special rituals"
+    },
+    {
+      "id": "pitru-rituals",
+      "name": "Pitru Rituals",
+      "icon": "🌑",
+      "description": "Pitru rituals and offerings"
     }
   ]
 }

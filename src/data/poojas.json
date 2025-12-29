@@ -1,365 +1,11 @@
 {
   "poojas": [
     {
-      "id": "namakaran",
-      "name": "Naamkaran (Naming Ceremony)",
-      "description": "Sacred naming ceremony performed 11 days after birth to bless the child with an auspicious name.",
-      "fullDescription": "Naamkaran is a sacred Hindu ceremony performed to name a newborn child. Conducted typically on the 11th day after birth, this ritual is one of the most important Samskaras (life-cycle ceremonies) in Hindu tradition. The ceremony involves Vedic chants, prayers, and blessings to give the child an auspicious name that will guide them throughout their life.",
-      "image": "https://images.unsplash.com/photo-0011082951354-61dd5dfe4b99?w=800",
-      "price": "4,800",
-      "duration": "2-3 hours",
-      "pandits": 1,
-      "category": "birth",
-      "icon": "👶",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        },
-        {
-            "name": "rock Package",
-            "price": "16,500",
-            "features": {
-              "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-              "excluded": []
-            },
-            "duration": "3 hours",
-            "pandits": 1
-          }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "annaprasan",
-      "name": "Annaprasan (First Feedingaaa)",
-      "description": "Baby's first solid food ceremony, marking the beginning of new dietary journey.",
-      "image": "https://images.unsplash.com/photo-1542814079-08d81c46cf5c?w=800",
-      "price": "3,900",
-      "duration": "1-2 hours",
-      "pandits": 1,
-      "category": "birth",
-      "icon": "👶",
-      "rating": 4.8,
-      "reviews": 15,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "mundan",
-      "name": "Mundan (First Haircut)",
-      "description": "Religious first haircut ceremony to purify and bless the child's life journey.",
-      "image": "https://images.unsplash.com/photo-1582610285985-a42d9192130c?w=800",
-      "price": "3,500",
-      "duration": "1-2 hours",
-      "pandits": 1,
-      "category": "birth",
-      "icon": "👶",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "chudakaran",
-      "name": "Chudakaran (Thread Wearing)",
-      "description": "Sacred thread ceremony marking the child's entry into spiritual education.",
-      "image": "https://images.unsplash.com/photo-1536431311719-398b6704d4cc?w=800",
-      "price": "5,200",
-      "duration": "2 hours",
-      "pandits": 1,
-      "category": "birth",
-      "icon": "👶",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "vivah",
-      "name": "Vivah Sanskar",
-      "description": "Complete Hindu wedding ceremony with all sacred rituals and Vedic chants.",
-      "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800",
-      "price": "45,000",
-      "duration": "Full Day",
-      "pandits": 3,
-      "category": "marriage",
-      "icon": "💒",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "engagement",
-      "name": "Mangni (Engagement)",
-      "description": "Pre-wedding engagement ceremony to formalize the commitment.",
-      "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800",
-      "price": "12,000",
-      "duration": "2-3 hours",
-      "pandits": 1,
-      "category": "marriage",
-      "icon": "💒",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "haldi",
-      "name": "Haldi & Mehendi",
-      "description": "Traditional pre-wedding ceremonies for blessing and celebration.",
-      "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800",
-      "price": "8,500",
-      "duration": "3-4 hours",
-      "pandits": 2,
-      "category": "marriage",
-      "icon": "💒",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
       "id": "ganesha-homam",
       "name": "Ganapathi Homam",
       "description": "Sacred fire ritual to invoke Lord Ganesha's blessings for removing obstacles.",
       "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
-      "price": "8,900",
+      "price": "12,001",
       "duration": "2-3 hours",
       "pandits": 2,
       "category": "homam",
@@ -368,20 +14,17 @@
       "reviews": 85,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
           "name": "Standard Package",
-          "price": "6,500",
+          "price": "12,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "All Puja Items",
+              "Flowers",
+              "Fruits",
+              "Extended prayers",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
           "duration": "3 hours",
@@ -409,7 +52,7 @@
       "description": "Fire ritual to appease nine planetary deities for cosmic balance and harmony.",
       "fullDescription": "Navagraha Homam is a comprehensive Vedic ritual dedicated to the nine celestial bodies that significantly influence human life. The nine planets (Grahas) are Surya (Sun), Chandra (Moon), Mangal (Mars), Budh (Mercury), Guru (Jupiter), Shukra (Venus), Shani (Saturn), Rahu (North Node), and Ketu (South Node). This sacred fire ceremony is performed to balance planetary influences, remove obstacles, and bring harmony to various aspects of life including career, health, relationships, and prosperity. Key Benefits: - Reduces malefic effects of unfavorable planetary positions - Enhances positive planetary influences - Brings balance to health and wellbeing - Improves career and financial prospects - Removes obstacles and delays in life - Promotes harmony in relationships - Provides spiritual growth and inner peace",
       "image": "https://images.unsplash.com/photo-1606924465501-66479f09c63b?w=800",
-      "price": "14,800",
+      "price": "15,001",
       "duration": "3-4 hours",
       "pandits": "2-3",
       "category": "homam",
@@ -418,20 +61,19 @@
       "reviews": 124,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "14,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Havan Items", "All Puja Items", "Havan Kunda", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits", "More mantra chantings"]
-          },
-          "duration": "1 day",
-          "pandits": 2
-        },
-        {
           "name": "Standard Package",
-          "price": "19,900",
+          "price": "15,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Havan Items", "All Puja Items", "Havan Kunda", "Pandit Ji Travel Charges", "Flowers", "Fruits", "More mantra chantings"],
+            "included": [
+              "Pandit ji dakshina",
+              "All Havan Items",
+              "All Puja Items",
+              "Havan Kunda",
+              "Pandit Ji Travel Charges",
+              "Flowers",
+              "Fruits",
+              "More mantra chantings"
+            ],
             "excluded": []
           },
           "duration": "1 day",
@@ -441,7 +83,14 @@
           "name": "Premium Package",
           "price": "28,500",
           "features": {
-            "included": ["All Standard features", "Extended mantra recitation", "Special prasadam", "Photography", "Digital certificate", "Custom offerings"],
+            "included": [
+              "All Standard features",
+              "Extended mantra recitation",
+              "Special prasadam",
+              "Photography",
+              "Digital certificate",
+              "Custom offerings"
+            ],
             "excluded": []
           },
           "duration": "1 day",
@@ -484,158 +133,11 @@
       ]
     },
     {
-      "id": "rudra-abhishekam",
-      "name": "Rudra Abhishekam",
-      "description": "Sacred bathing of Shiva Lingam with traditional substances and Vedic mantras.",
-      "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800",
-      "price": "12,500",
-      "duration": "2-3 hours",
-      "pandits": 2,
-      "category": "homam",
-      "icon": "🔥",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "suda-santhi",
-      "name": "Suda Santhi Homam",
-      "description": "Remedial fire ceremony for correcting planetary imbalances and doshas.",
-      "image": "https://images.unsplash.com/photo-1528634205781-9b51b318769e?w=800",
-      "price": "16,900",
-      "duration": "3-4 hours",
-      "pandits": 3,
-      "category": "homam",
-      "icon": "🔥",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "new-home",
-      "name": "New Home Pooja",
-      "description": "House warming ceremony for new homes to purify and bless the dwelling.",
-      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800",
-      "price": "12,800",
-      "duration": "3-4 hours",
-      "pandits": 2,
-      "category": "grihapravesh",
-      "icon": "🏠",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
       "id": "vastu-shanti",
       "name": "Vastu Shanti Pooja",
       "description": "Ritual to harmonize home energy and directions for prosperity.",
       "image": "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800",
-      "price": "15,900",
+      "price": "12,001",
       "duration": "4-5 hours",
       "pandits": 2,
       "category": "grihapravesh",
@@ -644,20 +146,17 @@
       "reviews": 85,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
           "name": "Standard Package",
-          "price": "6,500",
+          "price": "12,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "All Puja Items",
+              "Flowers",
+              "Fruits",
+              "Extended prayers",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
           "duration": "3 hours",
@@ -684,7 +183,7 @@
       "name": "Satyanarayana Pooja",
       "description": "Monthly prosperity and peace ritual dedicated to Lord Vishnu.",
       "image": "https://images.unsplash.com/photo-1606787947088-1d19f510b9f3?w=800",
-      "price": "4,200",
+      "price": "10,001",
       "duration": "2 hours",
       "pandits": 1,
       "category": "festival",
@@ -693,20 +192,17 @@
       "reviews": 85,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
           "name": "Standard Package",
-          "price": "6,500",
+          "price": "10,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "All Puja Items",
+              "Flowers",
+              "Fruits",
+              "Extended prayers",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
           "duration": "3 hours",
@@ -729,33 +225,30 @@
       ]
     },
     {
-      "id": "diwali",
-      "name": "Diwali Lakshmi Pooja",
-      "description": "Festival of lights with Goddess Lakshmi worship for wealth and prosperity.",
-      "image": "https://images.unsplash.com/photo-1606756790138-2610044de2c6?w=800",
-      "price": "6,800",
-      "duration": "3 hours",
+      "id": "new-home",
+      "name": "New Home Pooja",
+      "description": "House warming ceremony for new homes to purify and bless the dwelling.",
+      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800",
+      "price": "18,001",
+      "duration": "3-4 hours",
       "pandits": 2,
-      "category": "festival",
-      "icon": "🎉",
+      "category": "grihapravesh",
+      "icon": "🏠",
       "rating": 4.8,
       "reviews": 85,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
           "name": "Standard Package",
-          "price": "6,500",
+          "price": "18,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "All Puja Items",
+              "Flowers",
+              "Fruits",
+              "Extended prayers",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
           "duration": "3 hours",
@@ -778,250 +271,95 @@
       ]
     },
     {
-      "id": "durga-pooja",
-      "name": "Durga Pooja",
-      "description": "Nine nights of Goddess Durga worship during Navratri festival.",
-      "image": "https://images.unsplash.com/photo-1531572753323-ad0634ccd032?w=800",
-      "price": "9,900",
-      "duration": "1-9 Days",
-      "pandits": 2,
-      "category": "festival",
-      "icon": "🎉",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "ganesh-chaturthi",
-      "name": "Ganesh Chaturthi Pooja",
-      "description": "Lord Ganesha's birthday celebration with special prayers and rituals.",
-      "image": "https://images.unsplash.com/photo-1594736797933-d040fba4ab76?w=800",
-      "price": "5,500",
-      "duration": "2-3 hours",
+      "id": "amavasya-tarpanam",
+      "name": "Amavasya Tarpanam",
+      "description": "A sacred ancestral ritual performed on Amavasya (New Moon day) to offer gratitude and peace to departed ancestors (Pitru Devatas). This ritual helps remove Pitru Dosha and brings blessings for family well-being.",
+      "image": "https://www.gettyimages.in/detail/news-photo/hindu-devotee-takes-part-in-tarpan-ritual-to-honor-the-news-photo/1235732410",
+      "price": "1,001",
+      "duration": "45 minutes - 1 hour",
       "pandits": 1,
-      "category": "festival",
-      "icon": "🎉",
-      "rating": 4.8,
-      "reviews": 85,
+      "category": "pitru-rituals",
+      "icon": "🌑",
+      "rating": 4.7,
+      "reviews": 62,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
+          "name": "Complete Tarpanam",
+          "price": "1,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "Complete Pitru Tarpanam",
+              "Til, Kusha grass, sacred water",
+              "Short Shraddha prayers",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
-          "duration": "3 hours",
+          "duration": "1 hour",
           "pandits": 1
         }
       ],
       "faq": [
         {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
+          "question": "Who should perform Amavasya Tarpanam?",
+          "answer": "Traditionally, male descendants perform the ritual, but women can also perform it depending on family customs and guidance from the pandit."
         },
         {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
+          "question": "Is it mandatory every month?",
+          "answer": "It is not mandatory, but performing Amavasya Tarpanam regularly is believed to bring ancestral blessings and reduce obstacles."
         },
         {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
+          "question": "Can this be done at home?",
+          "answer": "Yes, Amavasya Tarpanam can be performed at home or near a water body under the guidance of a pandit."
         }
       ]
     },
     {
-      "id": "vehicle",
-      "name": "Vehicle Pooja",
-      "description": "Blessing new vehicles for safe journeys and protection from accidents.",
-      "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800",
-      "price": "3,200",
-      "duration": "1 hour",
+      "id": "mahalaya-tarpanam",
+      "name": "Mahalaya Tarpanam",
+      "description": "Mahalaya Tarpanam is a highly significant ancestral ritual performed during Pitru Paksha, especially on Mahalaya Amavasya. It is believed that ancestors visit the earthly realm on this day, and offerings made bring them peace and blessings.",
+      "image": "https://www.gettyimages.in/detail/news-photo/hindu-devotee-takes-part-in-tarpan-ritual-to-honor-the-news-photo/1235732410",
+      "price": "3,001",
+      "duration": "1.5 - 2 hours",
       "pandits": 1,
-      "category": "special",
-      "icon": "🌟",
-      "rating": 4.8,
-      "reviews": 85,
+      "category": "pitru-rituals",
+      "icon": "🌾",
+      "rating": 4.9,
+      "reviews": 98,
       "packages": [
         {
-          "name": "Basic Package",
-          "price": "4,800",
+          "name": "Complete Mahalaya Shraddha",
+          "price": "3,001",
           "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
+            "included": [
+              "Pandit ji dakshina",
+              "Complete Mahalaya Tarpanam",
+              "Shraddha rituals",
+              "Anna Daanam guidance",
+              "Blessing prayers for family prosperity",
+              "Pandit Ji Travel Charges"
+            ],
             "excluded": []
           },
-          "duration": "3 hours",
+          "duration": "2 hours",
           "pandits": 1
         }
       ],
       "faq": [
         {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
+          "question": "Why is Mahalaya Tarpanam important?",
+          "answer": "It is considered the most powerful day to honor ancestors, as offerings made on this day are believed to reach all departed souls of the lineage."
         },
         {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
+          "question": "What happens if Mahalaya Tarpanam is missed?",
+          "answer": "If missed, it can be performed on another suitable day during Pitru Paksha with guidance from a pandit."
         },
         {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "chandi-homam",
-      "name": "Chandi Homam",
-      "description": "Powerful fire ritual dedicated to Goddess Chandi for victory and protection.",
-      "image": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800",
-      "price": "18,900",
-      "duration": "4-5 hours",
-      "pandits": 3,
-      "category": "special",
-      "icon": "🌟",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
-        }
-      ]
-    },
-    {
-      "id": "mahamrityunjaya",
-      "name": "Mahamrityunjaya Jaap",
-      "description": "Chanting of life-giving mantra for health, longevity, and healing.",
-      "image": "https://images.unsplash.com/photo-1519066028946-7d5562edabf3?w=800",
-      "price": "8,200",
-      "duration": "3 hours",
-      "pandits": 2,
-      "category": "special",
-      "icon": "🌟",
-      "rating": 4.8,
-      "reviews": 85,
-      "packages": [
-        {
-          "name": "Basic Package",
-          "price": "4,800",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Pandit Ji Travel Charges"],
-            "excluded": ["Flowers", "Fruits"]
-          },
-          "duration": "2 hours",
-          "pandits": 1
-        },
-        {
-          "name": "Standard Package",
-          "price": "6,500",
-          "features": {
-            "included": ["Pandit ji dakshina", "All Puja Items", "Flowers", "Fruits", "Extended prayers", "Pandit Ji Travel Charges"],
-            "excluded": []
-          },
-          "duration": "3 hours",
-          "pandits": 1
-        }
-      ],
-      "faq": [
-        {
-          "question": "When should Naamkaran be performed?",
-          "answer": "Naamkaran is typically performed on the 11th, 12th, or 14th day after birth. The exact date is determined based on the baby's birth chart and family traditions."
-        },
-        {
-          "question": "What do we need to prepare?",
-          "answer": "You need to prepare a clean, sacred space for the ceremony. Our pandit will bring all necessary items including puja materials, flowers, and sacred texts."
-        },
-        {
-          "question": "Can we choose the name?",
-          "answer": "Yes, you can suggest names, and the pandit will help select the most auspicious one based on the child's birth chart and astrological considerations."
+          "question": "Can this ritual remove Pitru Dosha?",
+          "answer": "Yes, Mahalaya Tarpanam is believed to significantly reduce Pitru Dosha and bring peace, health, and prosperity to the family."
         }
       ]
     }
   ]
 }
-
