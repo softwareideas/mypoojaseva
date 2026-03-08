@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Sparkles, ArrowRight, Phone, Calendar } from "lucide-react";
+import heroImage from "@/assets/images/Gemini_Generated_Image_hcgcu4hcgcu4hcgc.png";
 
 const Hero: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -131,7 +132,7 @@ const Hero: React.FC = () => {
                   {!imageError ? (
                     <>
                       <img
-                        src="/src/assets/images/Gemini_Generated_Image_hcgcu4hcgcu4hcgc.png"
+                        src={heroImage}
                         alt="Traditional Hindu Pooja Ceremony"
                         className={`w-full h-full object-cover mix-blend-overlay transition-opacity duration-500 ${imageLoaded ? 'opacity-80' : 'opacity-0'
                           }`}

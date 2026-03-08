@@ -1,7 +1,7 @@
 import * as React from "react";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import ServicesHeader from "@/components/services/ServicesHeader";
 import HomePoojaServices from "@/components/services/HomePoojaServices";
@@ -12,8 +12,20 @@ import PoojaCalendar from "@/components/PoojaCalendar";
 import PanditProfiles from "@/components/PanditProfiles";
 import MonthlyTarpanamServices from "@/components/services/MonthlyTarpanamServices";
 import LifecycleFlowchart from "@/components/LifecycleFlowchart";
+import ServiceNavCard, { SERVICE_ITEMS } from "@/components/services/ServiceNavCard";
+
+const CONTENT_MAP: Record<string, React.ReactNode> = {
+  flowchart: <LifecycleFlowchart />,
+  lifecycle: <LifeCycleServices />,
+  pooja: <HomePoojaServices />,
+  tarpanam: <MonthlyTarpanamServices />,
+  samskara: <SamskaraGuide />,
+  calendar: <PoojaCalendar />,
+};
 
 const Services = () => {
+  const [activeSection, setActiveSection] = useState("flowchart");
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -21,71 +33,33 @@ const Services = () => {
       <main className="flex-grow">
         <ServicesHeader />
 
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <Tabs defaultValue="flowchart" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6">
-              <TabsTrigger
-                value="flowchart"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Interactive Journey
-              </TabsTrigger>
-              <TabsTrigger
-                value="lifecycle"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Life Cycle
-              </TabsTrigger>
-              <TabsTrigger
-                value="pooja"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Pooja Services
-              </TabsTrigger>
-              <TabsTrigger
-                value="tarpanam"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Monthly Tarpanam
-              </TabsTrigger>
-              <TabsTrigger
-                value="samskara"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Samskara Guide
-              </TabsTrigger>
-              <TabsTrigger
-                value="calendar"
-                className="data-[state=active]:bg-saffron/10 data-[state=active]:text-saffron text-xs lg:text-sm"
-              >
-                Calendar
-              </TabsTrigger>
-            </TabsList>
+        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          {/* Bento Grid Navigation */}
+          <div className="mb-10">
+            <p className="text-sm font-medium text-maroon/80 uppercase tracking-widest mb-4">
+              Choose your path
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {SERVICE_ITEMS.map((item) => (
+                <ServiceNavCard
+                  key={item.id}
+                  item={item}
+                  isActive={activeSection === item.id}
+                  onClick={() => setActiveSection(item.id)}
+                />
+              ))}
+            </div>
+          </div>
 
-            <TabsContent value="flowchart" className="mt-6">
-              <LifecycleFlowchart />
-            </TabsContent>
-
-            <TabsContent value="lifecycle" className="mt-6">
-              <LifeCycleServices />
-            </TabsContent>
-
-            <TabsContent value="pooja" className="mt-6">
-              <HomePoojaServices />
-            </TabsContent>
-
-            <TabsContent value="tarpanam" className="mt-6">
-              <MonthlyTarpanamServices />
-            </TabsContent>
-
-            <TabsContent value="samskara" className="mt-6">
-              <SamskaraGuide />
-            </TabsContent>
-
-            <TabsContent value="calendar" className="mt-6">
-              <PoojaCalendar />
-            </TabsContent>
-          </Tabs>
+          {/* Content Area with smooth transition */}
+          <div
+            key={activeSection}
+            className="animate-fade-in-up"
+          >
+            <div className="rounded-2xl border border-saffron/20 bg-gradient-to-b from-white to-amber-50/30 p-6 sm:p-8 shadow-lg">
+              {CONTENT_MAP[activeSection]}
+            </div>
+          </div>
         </section>
 
         <Separator className="my-12" />

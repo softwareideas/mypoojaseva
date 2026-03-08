@@ -566,45 +566,6 @@ const Booking = () => {
                 </p>
               </div>
             </div>
-            
-            {/* Step Progress Indicator */}
-            <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
-              <div className="flex items-center justify-between">
-                {steps.map((step, index) => (
-                  <React.Fragment key={step.number}>
-                    <div className="flex flex-col items-center flex-1">
-                      <div className={`relative w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all duration-300 ${
-                        step.completed
-                          ? 'bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg scale-110'
-                          : currentStep === step.number
-                          ? 'bg-gradient-to-br from-maroon to-saffron text-white shadow-lg scale-110 ring-4 ring-maroon/20'
-                          : 'bg-gray-200 text-gray-500'
-                      }`}>
-                        {step.completed ? (
-                          <CheckCircle className="h-6 w-6" />
-                        ) : (
-                          step.number
-                        )}
-                      </div>
-                      <span className={`mt-2 text-sm font-medium transition-colors ${
-                        step.completed || currentStep === step.number
-                          ? 'text-maroon'
-                          : 'text-gray-500'
-                      }`}>
-                        {step.title}
-                      </span>
-                    </div>
-                    {index < steps.length - 1 && (
-                      <div className={`flex-1 h-1 mx-4 rounded-full transition-all duration-500 ${
-                        step.completed
-                          ? 'bg-gradient-to-r from-green-500 to-green-600'
-                          : 'bg-gray-200'
-                      }`} />
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 

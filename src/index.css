@@ -240,6 +240,15 @@
   background: linear-gradient(135deg, rgba(255, 153, 51, 0.8) 0%, rgba(139, 30, 63, 1) 100%);
 }
 
+/* Hide scrollbar but keep scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Enhanced Spiritual Text Gradient */
 .spiritual-text {
   background: linear-gradient(135deg, #FF9933 0%, #8B1E3F 100%);

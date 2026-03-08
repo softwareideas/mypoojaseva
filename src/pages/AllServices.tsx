@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Sparkles } from "lucide-react";
+import { Search } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -15,25 +15,20 @@ import {
   getAllPoojas,
   getUniqueCategories,
   formatCategoryLabel,
+  searchPoojas,
 } from "@/utils/poojas";
 
 const allPoojas = getAllPoojas();
 
 const AllServices = () => {
+  const phoneNumber = "918608765113";
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get("search") || ""
   );
 
   const filteredPoojas = useMemo(() => {
-    if (!searchQuery.trim()) return allPoojas;
-
-    const query = searchQuery.toLowerCase();
-    return allPoojas.filter(
-      (pooja) =>
-        pooja.name.toLowerCase().includes(query) ||
-        pooja.description.toLowerCase().includes(query)
-    );
+    return searchPoojas(allPoojas, searchQuery);
   }, [searchQuery]);
 
   useEffect(() => {
@@ -50,6 +45,17 @@ const AllServices = () => {
     } else {
       setSearchParams({});
     }
+  };
+
+  const handleCustomPoojaWhatsApp = () => {
+    const categoryLabel =
+      selectedCategory === "all" ? "Any category" : formatCategoryLabel(selectedCategory);
+    const query = searchQuery.trim() || "No specific pooja name";
+    const message = `Hello, I couldn't find the pooja I want on your website.\n\nRequested Pooja: *${query}*\nCategory: *${categoryLabel}*\n\nPlease share availability and price.`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   // Build categories dynamically from poojas.json
@@ -148,88 +154,26 @@ const AllServices = () => {
               />
             </form>
 
-            {/* Category Filter - Spiritual Strip */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-center gap-2 text-xs font-medium text-maroon/70 uppercase tracking-[0.25em]">
-                <span className="w-6 h-px bg-gradient-to-r from-transparent via-maroon/40 to-transparent" />
-                <span className="flex items-center gap-1">
-                  <Sparkles className="h-3 w-3 text-saffron" />
-                  Browse Sacred Categories
-                </span>
-                <span className="w-6 h-px bg-gradient-to-r from-transparent via-maroon/40 to-transparent" />
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 w-8 pointer-events-none bg-gradient-to-r from-white via-white/80 to-transparent" />
-                <div className="absolute inset-y-0 right-0 w-8 pointer-events-none bg-gradient-to-l from-white via-white/80 to-transparent" />
-
-                <div className="flex gap-4 overflow-x-auto py-2 px-1 scrollbar-thin scrollbar-thumb-maroon/30 scrollbar-track-transparent">
-                  {categories.map((category) => {
-                    const isActive = selectedCategory === category.id;
-                    const description =
-                      category.id === "all"
-                        ? "View all rituals"
-                        : `${category.name} related ceremonies`;
-
-                    return (
-                      <button
-                        key={category.id}
-                        type="button"
-                        onClick={() => setSelectedCategory(category.id)}
-                        className={`group relative min-w-[170px] rounded-2xl border px-4 py-3 text-left transition-all duration-300 flex-shrink-0 ${
-                          isActive
-                            ? "bg-gradient-to-br from-maroon to-saffron text-white border-transparent shadow-[0_10px_30px_rgba(139,30,63,0.35)] scale-[1.03]"
-                            : "bg-white/90 border-maroon/15 text-maroon hover:bg-maroon/5 hover:border-maroon/40 hover:shadow-md"
-                        }`}
-                      >
-                        <div className="flex items-start gap-3">
-                          <div
-                            className={`mt-0.5 flex h-8 w-8 items-center justify-center rounded-full border text-xs font-semibold tracking-wide transition-all duration-300 ${
-                              isActive
-                                ? "bg-white/15 border-white/40 text-white"
-                                : "bg-maroon/5 border-maroon/20 text-maroon"
-                            }`}
-                          >
-                            {category.id === "all" ? "ALL" : category.name[0]}
-                          </div>
-                          <div className="space-y-1">
-                            <p
-                              className={`text-sm font-semibold leading-snug transition-colors ${
-                                isActive ? "text-white" : "text-maroon"
-                              }`}
-                            >
-                              {category.name}
-                            </p>
-                            <p
-                              className={`text-[11px] leading-snug transition-colors ${
-                                isActive ? "text-amber-100/90" : "text-gray-500"
-                              }`}
-                            >
-                              {description}
-                            </p>
-                          </div>
-                        </div>
-                        {isActive && (
-                          <div className="absolute -bottom-1 left-1/2 h-1 w-10 -translate-x-1/2 rounded-full bg-gradient-to-r from-amber-200 via-white to-amber-200 opacity-90 blur-[2px]" />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
+            {/* Category Filter - Simple Pills */}
+            <div className="flex gap-2 overflow-x-auto py-2 -mx-1 scrollbar-hide snap-x snap-mandatory">
+              {categories.map((category) => {
+                const isActive = selectedCategory === category.id;
+                return (
+                  <button
+                    key={category.id}
+                    type="button"
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`snap-center shrink-0 rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-maroon text-white shadow-sm"
+                        : "bg-maroon/5 text-maroon hover:bg-maroon/10"
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                );
+              })}
             </div>
-
-            {/* Results Count */}
-            <p className="text-center text-sm text-gray-500 font-medium">
-              {displayedPoojas.length}{" "}
-              {displayedPoojas.length === 1 ? "service" : "services"} available
-              {searchQuery && (
-                <span className="text-maroon font-semibold">
-                  {" "}
-                  for "{searchQuery}"
-                </span>
-              )}
-            </p>
           </div>
 
           {/* Poojas Grid */}
@@ -274,6 +218,15 @@ const AllServices = () => {
               <p className="text-gray-400 text-sm mt-2">
                 Try adjusting your filters or search terms.
               </p>
+              <div className="mt-6 flex justify-center">
+                <Button
+                  type="button"
+                  className="bg-green-600 hover:bg-green-700 text-white rounded-full px-6 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={handleCustomPoojaWhatsApp}
+                >
+                  Request Custom Pooja on WhatsApp
+                </Button>
+              </div>
             </div>
           )}
         </div>

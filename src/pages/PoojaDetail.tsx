@@ -33,7 +33,7 @@ const PoojaDetail = () => {
   const navigate = useNavigate();
   const [selectedPackageIndex, setSelectedPackageIndex] = useState<
     number | null
-  >(1); // Default to second package (index 1)
+  >(0); // Default to first package
   const [scrollY, setScrollY] = useState(0);
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -544,7 +544,7 @@ Key Benefits:
                       
                       <Button
                         className="w-full bg-gradient-to-r from-maroon to-saffron hover:from-maroon/90 hover:to-saffron/90 text-white rounded-xl py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group"
-                        onClick={() => handleBookNow(pooja)}
+                        onClick={() => handleBookNow(pooja.packages?.[selectedPackageIndex ?? 0] || pooja)}
                       >
                         <Calendar className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                         Select Date & Book Now

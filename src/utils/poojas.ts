@@ -9,7 +9,23 @@ export interface Pooja {
   duration?: string;
   pandits?: number | string;
   category: string;
+  keywords?: string[];
   [key: string]: any;
+}
+
+/** Search poojas by name, description, keywords, and category */
+export function searchPoojas(poojas: Pooja[], query: string): Pooja[] {
+  if (!query.trim()) return poojas;
+  const q = query.toLowerCase();
+  return poojas.filter((p) => {
+    const nameMatch = p.name.toLowerCase().includes(q);
+    const descMatch = p.description?.toLowerCase().includes(q);
+    const catMatch = formatCategoryLabel(p.category || "").toLowerCase().includes(q);
+    const keywordMatch = Array.isArray(p.keywords)
+      ? p.keywords.some((k) => String(k).toLowerCase().includes(q))
+      : false;
+    return nameMatch || descMatch || catMatch || keywordMatch;
+  });
 }
 
 export function getAllPoojas(): Pooja[] {
