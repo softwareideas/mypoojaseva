@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
               Services
             </h3>
             <ul className="mt-4 space-y-2">
-              <FooterLink to="/services">Birth Ceremonies</FooterLink>
-              <FooterLink to="/services">Marriage Rituals</FooterLink>
-              <FooterLink to="/services">Griha Pravesh</FooterLink>
-              <FooterLink to="/services">Homam Services</FooterLink>
-              <FooterLink to="/services">Spiritual Guidance</FooterLink>
+              <FooterLink to="/services/birth-ceremonies">Birth Ceremonies</FooterLink>
+              <FooterLink to="/services/marriage-rituals">Marriage Rituals</FooterLink>
+              <FooterLink to="/services/griha-pravesh">Griha Pravesh</FooterLink>
+              <FooterLink to="/services/homam-services">Homam Services</FooterLink>
+              <FooterLink to="/services/spiritual-guidance">Spiritual Guidance</FooterLink>
             </ul>
           </div>
 
@@ -50,8 +50,8 @@ const Footer: React.FC = () => {
               Resources
             </h3>
             <ul className="mt-4 space-y-2">
-              <FooterLink to="/services">Ritual Guides</FooterLink>
-              <FooterLink to="/services">Service Information</FooterLink>
+              <FooterLink to="/resources/ritual-guides">Ritual Guides</FooterLink>
+              <FooterLink to="/services">All Services</FooterLink>
               <FooterLink to="/contact">Contact Us</FooterLink>
             </ul>
           </div>

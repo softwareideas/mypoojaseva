@@ -15,14 +15,27 @@ import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
 import OtpLogin from "./pages/OtpLogin";
 
+// Service Category Pages
+import BirthCeremonies from "./pages/services/BirthCeremonies";
+import MarriageRituals from "./pages/services/MarriageRituals";
+import GrihaPravesh from "./pages/services/GrihaPravesh";
+import HomamServices from "./pages/services/HomamServices";
+import SpiritualGuidance from "./pages/services/SpiritualGuidance";
+
+// Resource Pages
+import RitualGuides from "./pages/resources/RitualGuides";
+
 const queryClient = new QueryClient();
+
+// Use basename only in production (GitHub Pages), not in development
+const basename = import.meta.env.MODE === 'production' ? '/mypoojaseva' : '/';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/mypoojaseva">
+      <BrowserRouter basename={basename}>
         <ScrollToTop />
         <WhatsAppButton />
         <Routes>
@@ -30,8 +43,21 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<AllServices />} />
           <Route path="/services-old" element={<Services />} />
+          
+          {/* Service Category Routes */}
+          <Route path="/services/birth-ceremonies" element={<BirthCeremonies />} />
+          <Route path="/services/marriage-rituals" element={<MarriageRituals />} />
+          <Route path="/services/griha-pravesh" element={<GrihaPravesh />} />
+          <Route path="/services/homam-services" element={<HomamServices />} />
+          <Route path="/services/spiritual-guidance" element={<SpiritualGuidance />} />
+          
+          {/* Resource Routes */}
+          <Route path="/resources/ritual-guides" element={<RitualGuides />} />
+          
+          {/* Dynamic Routes */}
           <Route path="/pooja/:id" element={<PoojaDetail />} />
           <Route path="/booking/:id" element={<Booking />} />
+          
           <Route path="/contact" element={<Contact />} />
           <Route path="/otp-login" element={<OtpLogin />} />
           <Route path="*" element={<NotFound />} />
