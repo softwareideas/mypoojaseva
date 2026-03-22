@@ -1,7 +1,4 @@
-// Booking utility functions for Firebase Firestore
-
-import { db } from "@/firebase/config";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+// Booking utility functions
 
 export interface BookingData {
   poojaName: string;
@@ -18,20 +15,31 @@ export interface BookingData {
   signature: string;
   paymentAmount: number;
   totalAmount: number;
-  paymentType: "advance" | "full";
+  paymentType: "advance" | "full" | "cod";
   status: "pending" | "confirmed" | "cancelled";
-  createdAt: any;
+  createdAt?: string;
 }
 
 export const storeBooking = async (
   bookingData: Omit<BookingData, "createdAt">
 ): Promise<string> => {
   try {
-    const bookingRef = await addDoc(collection(db, "bookings"), {
+    const booking = {
       ...bookingData,
-      createdAt: serverTimestamp(),
-    });
-    return bookingRef.id;
+      createdAt: new Date().toISOString(),
+    };
+
+    // Store in localStorage for now
+    const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+    const bookingId = `BOOK-${Date.now()}`;
+    bookings.push({ id: bookingId, ...booking });
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    // TODO: Send to backend API for email notifications
+    // You can implement this later to send booking details to your backend
+    console.log("Booking stored:", booking);
+
+    return bookingId;
   } catch (error) {
     console.error("Error storing booking:", error);
     throw error;

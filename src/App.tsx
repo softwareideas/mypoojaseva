@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import PoojaDetail from "./pages/PoojaDetail";
 import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
-import OtpLogin from "./pages/OtpLogin";
 
 // Service Category Pages
 import BirthCeremonies from "./pages/services/BirthCeremonies";
@@ -59,7 +58,6 @@ const App = () => (
           <Route path="/booking/:id" element={<Booking />} />
           
           <Route path="/contact" element={<Contact />} />
-          <Route path="/otp-login" element={<OtpLogin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
