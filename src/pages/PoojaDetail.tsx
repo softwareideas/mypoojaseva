@@ -277,7 +277,7 @@ Key Benefits:
                       <img
                         src={pooja.image}
                         alt={pooja.name}
-                        className={`w-full h-full object-cover transform group-hover:scale-105 transition-all duration-700 ${
+                        className={`w-full h-full object-fill transform group-hover:scale-105 transition-all duration-700 ${
                           imageLoaded ? 'opacity-100' : 'opacity-0'
                         }`}
                         onLoad={() => setImageLoaded(true)}

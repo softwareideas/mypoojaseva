@@ -36,7 +36,7 @@ const PoojaCard: React.FC<PoojaCardProps> = ({
           <img 
             src={image || `https://source.unsplash.com/random/400x300?hindu+pooja&sig=${id}`} 
             alt={name}
-            className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+            className={`w-full h-full object-fill transition-all duration-500 group-hover:scale-105 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             onLoad={() => setImageLoaded(true)}
