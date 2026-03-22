@@ -27,15 +27,12 @@ import RitualGuides from "./pages/resources/RitualGuides";
 
 const queryClient = new QueryClient();
 
-// Use basename only in production (GitHub Pages), not in development
-const basename = import.meta.env.MODE === 'production' ? '/mypoojaseva' : '/';
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={basename}>
+      <BrowserRouter>
         <ScrollToTop />
         <WhatsAppButton />
         <Routes>
