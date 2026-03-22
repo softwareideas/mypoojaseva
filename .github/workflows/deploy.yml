@@ -37,8 +37,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Using GitHub Pages subdomain: softwareideas.github.io/mypoojaseva/
-          VITE_BASE_PATH: '/mypoojaseva/'
+          # Using custom domain: mypoojaseva.com
+          VITE_BASE_PATH: '/'
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
