@@ -12,6 +12,7 @@ import AllServices from "./pages/AllServices";
 import Contact from "./pages/Contact";
 import PoojaDetail from "./pages/PoojaDetail";
 import Booking from "./pages/Booking";
+import RefundPolicy from "./pages/RefundPolicy";
 import NotFound from "./pages/NotFound";
 
 // Service Category Pages
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/booking/:id" element={<Booking />} />
           
           <Route path="/contact" element={<Contact />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
