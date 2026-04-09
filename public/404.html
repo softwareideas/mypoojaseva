@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <title>My Pooja Seva</title>
   <script>
-    // GitHub Pages SPA redirect hack
-    // This script takes the current URL and converts the path and query
-    // string into just a query string, and then redirects to the new URL
-    // with the correct base path
-    var pathSegmentsToKeep = 1;
+    // GitHub Pages SPA redirect for custom domain
+    // Redirect all 404s to index.html with the path as a query parameter
+    var pathSegmentsToKeep = 0;
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
