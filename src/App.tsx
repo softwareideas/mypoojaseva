@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import PoojaDetail from "./pages/PoojaDetail";
 import Booking from "./pages/Booking";
 import RefundPolicy from "./pages/RefundPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 // Service Category Pages
@@ -57,6 +59,8 @@ const App = () => (
           
           <Route path="/contact" element={<Contact />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

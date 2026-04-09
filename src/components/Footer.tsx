@@ -52,6 +52,8 @@ const Footer: React.FC = () => {
             <ul className="mt-4 space-y-2">
               <FooterLink to="/resources/ritual-guides">Ritual Guides</FooterLink>
               <FooterLink to="/services">All Services</FooterLink>
+              <FooterLink to="/terms-and-conditions">Terms & Conditions</FooterLink>
+              <FooterLink to="/privacy-policy">Privacy Policy</FooterLink>
               <FooterLink to="/refund-policy">Refund Policy</FooterLink>
               <FooterLink to="/contact">Contact Us</FooterLink>
             </ul>
